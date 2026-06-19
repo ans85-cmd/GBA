@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Login - GBA</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root {
+  --bg:#0a0d14;
+  --panel:#111726cc;
+  --panel2:#1b2336;
+  --accent:#e2001a;
+}
+
+body {
+  margin:0;
+  font-family:Segoe UI;
+
+  background:
+    linear-gradient(rgba(10,13,20,0.7), rgba(10,13,20,0.9)),
+    url("bg.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.login-box {
+  width:340px;
+  padding:30px;
+  border-radius:12px;
+  background: var(--panel);
+  box-shadow:0 0 25px rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  display:block;
+  margin:0 auto 20px auto;
+  max-width:130px;
+}
+
+h2 {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+input {
+  width:100%;
+  margin-bottom:12px;
+  padding:10px;
+  background:var(--panel2);
+  border:1px solid #2a3450;
+  color:white;
+  border-radius:6px;
+  outline:none;
+  box-sizing: border-box;
+}
+
+button {
+  width:100%;
+  padding:10px;
+  background:var(--accent);
+  border:none;
+  color:white;
+  font-weight:bold;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.9;
+}
+
+#error {
+  margin-top:10px;
+  text-align:center;
+  font-size:12px;
+  color:#ff4d4f;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+  <img src="logo.png" class="logo">
+
+  <input id="email" placeholder="E-Mail">
+  <input id="password" type="password" placeholder="Passwort">
+
+  <button onclick="login()">Anmelden</button>
+
+  <div id="error"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabase = supabase.createClient('https://ppuexopggtveafisbfbz.supabase.co', 'sb_publishable_MdNwEGQxq7JsfCjavTDUVw_MZsCeqlH');
+
+       async function login() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const errorDiv = document.getElementById('error');
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: email,
+    password: password,
+  });
+
+  if (error) {
+    errorDiv.innerText = "Anmeldung fehlgeschlagen: " + error.message;
+  } else {
+    // Wenn erfolgreich:
+    window.location.href = 'index.html';
+  }
+        }
+</script>
+
+</body>
+</html>
