@@ -85,7 +85,13 @@
         const { data: { session } } = await sbClient.auth.getSession();
         if (!session) { window.location.href = 'login.html'; return; }
         
-        // Erst KNOLO laden, dann UI anzeigen
+        // 1. Automatisch X99.json laden
+        try {
+            const resp = await fetch('X99.json');
+            if (resp.ok) data = await resp.json();
+        } catch (e) { console.warn("Kein X99.json gefunden."); }
+
+        // 2. KNOLO laden
         await loadKnoloData();
         document.body.style.visibility = 'visible';
     }
@@ -95,7 +101,7 @@
             const res = await fetch('knoloData.json');
             knoloData = await res.json();
             render();
-        } catch (e) { console.error("KNOLO konnte nicht geladen werden", e); render(); }
+        } catch (e) { render(); }
     }
 
     async function logout() { await sbClient.auth.signOut(); window.location.href = 'login.html'; }
