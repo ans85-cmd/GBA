@@ -46,9 +46,7 @@
         <button onclick="clearSelection()">↩ Auswahl</button>
         <button onclick="logout()">Logout</button>
         <div class="import-btn" onclick="importFile.click()" style="text-align:center; cursor:pointer; background:#1b2336; padding:8px; border:1px solid #2a3450; border-radius:6px; font-size:12px;">📂 Import</div>
-        <div class="file-name" id="fileName" style="font-size:11px; color:#aaa; text-align:center;">keine Datei</div>
         <input id="importFile" type="file" onchange="importJSON(event)" style="display:none;">
-        <div class="footer" style="margin-top:auto; font-size:10px; text-align:center;">(c) bk2026</div>
     </div>
 
     <div class="main">
@@ -86,6 +84,8 @@
         }
         const { data: { session } } = await sbClient.auth.getSession();
         if (!session) { window.location.href = 'login.html'; return; }
+        
+        // Erst KNOLO laden, dann UI anzeigen
         await loadKnoloData();
         document.body.style.visibility = 'visible';
     }
@@ -95,7 +95,7 @@
             const res = await fetch('knoloData.json');
             knoloData = await res.json();
             render();
-        } catch (e) { document.body.style.visibility = 'visible'; render(); }
+        } catch (e) { console.error("KNOLO konnte nicht geladen werden", e); render(); }
     }
 
     async function logout() { await sbClient.auth.signOut(); window.location.href = 'login.html'; }
@@ -105,8 +105,7 @@
     function tmin(t) { let [h,m]=t.split(":").map(Number); return h*60+m; }
 
     function render() {
-        let app = document.getElementById("app");
-        app.innerHTML = "";
+        let app = document.getElementById("app"); app.innerHTML = "";
         let g = {};
         data.forEach((d,i) => {
             g[d.tag] ??= {}; g[d.tag][d.gleis] ??= [];
@@ -120,15 +119,12 @@
                     let d = document.createElement("div"); d.className = "train";
                     let s1 = tmin(t.von), e1 = tmin(t.bis);
                     let assignedLayer = 0;
-                    for(let l=0; l<layers.length; l++) {
-                        if(!layers[l].some(ex => (s1 < ex.end && e1 > ex.start))) { assignedLayer = l; break; }
-                        assignedLayer = l + 1;
-                    }
-                    if(!layers[assignedLayer]) layers[assignedLayer] = [];
-                    layers[assignedLayer].push({start: s1, end: e1});
+                    for(let l=0; l<layers.length; l++) { if(!layers[l].some(ex => (s1 < ex.end && e1 > ex.start))) { assignedLayer = l; break; } assignedLayer = l + 1; }
+                    if(!layers[assignedLayer]) layers[assignedLayer] = []; layers[assignedLayer].push({start: s1, end: e1});
                     d.style.left = s1/1440*100 + "%"; d.style.width = (e1-s1)/1440*100 + "%"; d.style.top = assignedLayer*24 + "px";
                     d.style.background = knoloData.find(x => x.ZugNr === t.zug) ? "#166534" : (t.farbe || "#e2001a");
-                    d.innerText = t.zug; d.onclick = () => { selectedIndex = t.index; render(); };
+                    d.innerText = t.zug; if(selectedIndex === t.index) d.classList.add("highlight");
+                    d.onclick = (e) => { e.stopPropagation(); selectedIndex = t.index; document.getElementById("tag").value=t.tag; document.getElementById("gleis").value=t.gleis; document.getElementById("zug").value=t.zug; document.getElementById("von").value=t.von; document.getElementById("bis").value=t.bis; document.getElementById("zugSearch").value=t.zug; searchKNOLO(); render(); };
                     tl.appendChild(d);
                 });
                 tl.style.height = (Math.max(layers.length, 1) * 24 + 4) + "px";
@@ -141,17 +137,12 @@
 
     function searchKNOLO() {
         let val = document.getElementById("zugSearch").value.toLowerCase();
-        let head = document.getElementById("resultHead");
-        let body = document.getElementById("result");
+        let head = document.getElementById("resultHead"); let body = document.getElementById("result");
         body.innerHTML = "";
         let gefiltert = knoloData.filter(x => Object.values(x).some(v => String(v).toLowerCase().includes(val)));
         if (gefiltert.length > 0) {
             head.innerHTML = `<tr>${Object.keys(gefiltert[0]).map(k => `<th>${k}</th>`).join("")}</tr>`;
-            gefiltert.forEach(r => {
-                let tr = document.createElement("tr");
-                tr.innerHTML = Object.values(r).map(v => `<td>${v}</td>`).join("");
-                body.appendChild(tr);
-            });
+            gefiltert.forEach(r => { let tr = document.createElement("tr"); tr.innerHTML = Object.values(r).map(v => `<td>${v}</td>`).join(""); body.appendChild(tr); });
         }
     }
 
@@ -161,7 +152,6 @@
         data.push({ tag: document.getElementById("tag").value, gleis:g, zug:z, von:v, bis:b, farbe: document.getElementById("farbe").value });
         render();
     }
-
     function deleteSelected() { if(selectedIndex !== null) { data.splice(selectedIndex, 1); selectedIndex = null; render(); } }
     function clearSelection() { selectedIndex = null; render(); }
     function clearAll() { data = []; render(); }
