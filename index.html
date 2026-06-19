@@ -234,24 +234,22 @@ td { border-bottom:1px solid #333; }
 </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const supabase = supabase.createClient('https://ppuexopggtveafisbfbz.supabase.co', 'sb_publishable_MdNwEGQxq7JsfCjavTDUVw_MZsCeqlH');
+  const supabase = supabase.createClient('https://ppuexopggtveafisbfbz.supabase.co', 'sb_publishable_MdNwEGQxq7JsfCjavTDUVw_MZsCeqlH');
 
-        // Prüfen, ob der Nutzer eingeloggt ist
-        async function checkUser() {
-            const { data: { session } } = await supabase.auth.getSession();
-            if (!session) {
-                window.location.href = 'login.html'; // Umleitung zum Login
-            }
-        }
-
-        async function logout() {
-            await supabase.auth.signOut();
-            window.location.href = 'login.html';
-        }
-
-        // Check beim Laden der Seite ausführen
-        checkUser();
+  // Dieser "Wächter" prüft sofort beim Laden
+  async function checkAuth() {
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    // Wenn keine Session existiert, wird der Benutzer sofort weitergeleitet
+    if (!session) {
+      window.location.href = 'login.html'; 
+    }
+  }
+  
+  // Funktion sofort ausführen
+  checkAuth();
 </script>
 
 <script>
