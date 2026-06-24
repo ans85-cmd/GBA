@@ -116,10 +116,24 @@
     function render() {
         let app = document.getElementById("app"); app.innerHTML = "";
         let g = {};
-        data.forEach((d,i) => {
+        
+        // 1. Suchbegriff aus dem Header auslesen
+        let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase() : "";
+
+        data.forEach((d, i) => {
+            // 2. Prüfen, ob der Eintrag zum Suchbegriff passt (z.B. Zugnummer oder Gleis)
+            if (searchQuery) {
+                let matchesZug = d.zug && d.zug.toLowerCase().includes(searchQuery);
+                let matchesGleis = d.gleis && d.gleis.toLowerCase().includes(searchQuery);
+                
+                // Wenn es nicht passt, überspringen wir diesen Eintrag
+                if (!matchesZug && !matchesGleis) return;
+            }
+
             g[d.tag] ??= {}; g[d.tag][d.gleis] ??= [];
             g[d.tag][d.gleis].push({...d, index: i});
         });
+
         Object.keys(g).sort((a,b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {
             let day = document.createElement("div"); day.className = "day"; day.innerHTML = `<div class='day-header'>${tag}</div>`;
             Object.keys(g[tag]).forEach(gleis => {
@@ -143,7 +157,7 @@
             app.appendChild(day);
         });
     }
-
+    
     function searchKNOLO() {
         let val = document.getElementById("zugSearch").value.toLowerCase();
         let head = document.getElementById("resultHead"); let body = document.getElementById("result");
