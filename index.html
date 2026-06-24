@@ -32,6 +32,7 @@
         td { border-bottom:1px solid #333; }
         .logo-container { display:flex; justify-content:center; align-items:center; margin-bottom:10px; }
         .logo { max-width:120px; height:auto; }
+        .copyright { margin-left: auto; font-size: 11px; color: #556587; white-space: nowrap; padding-left: 10px; }
     </style>
 </head>
 <body>
@@ -62,6 +63,7 @@
             <input id="farbe" type="color" value="#e2001a">
             <button onclick="addEntry()">Speichern</button>
             <input id="search" placeholder="🔎 Suche..." oninput="render()">
+            <span class="copyright">© Bernhard Kornberger 2026</span>
         </div>
         <div id="app" class="container"></div>
         <div class="bottom">
