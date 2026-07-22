@@ -17,11 +17,11 @@
         input, select { background:var(--panel2); border:1px solid #2a3450; color:white; padding:6px; }
         .container { flex:1; display:flex; gap:10px; padding:10px; overflow:auto; }
         .day { min-width:280px; background:var(--panel); }
-        .day-header { padding:6px; text-align:center; background:var(--panel2); }
+        .day-header { padding:6px; text-align:center; background:var(--panel2); font-weight:bold; }
         .track { background:#0f1524; margin:6px; padding:6px; }
-        .track-title { color:#e2001a; font-size:12px; }
+        .track-title { color:#e2001a; font-size:12px; font-weight:bold; }
         .timeline { position:relative; min-height:30px; background: repeating-linear-gradient(to right, var(--grid) 0px, var(--grid) 1px, transparent 1px, transparent calc(100% / 24)); }
-        .train { position:absolute; height:22px; font-size:10px; line-height:22px; text-align:center; cursor:pointer; }
+        .train { position:absolute; height:22px; font-size:10px; line-height:22px; text-align:center; cursor:pointer; font-weight:bold; border-radius:3px; }
         .highlight { outline:2px solid var(--highlight); box-shadow:0 0 8px var(--highlight); }
         
         /* Bereich: Auswertung KNOLO (Einklappbar) */
@@ -52,6 +52,45 @@
         .logo-container { display:flex; justify-content:center; align-items:center; margin-bottom:10px; }
         .logo { max-width:120px; height:auto; }
         .copyright { margin-left: auto; font-size: 11px; color: #FFFFFF; white-space: nowrap; padding-left: 10px; }
+
+        /* ========================================== */
+        /* STYLES FÜR DEN PDF- / DRUCK-EXPORT         */
+        /* ========================================== */
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 10mm;
+            }
+            body {
+                visibility: visible !important;
+                background: #0a0d14 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .sidebar, .header, .bottom {
+                display: none !important; /* Versteckt Bedienelemente im PDF */
+            }
+            .app, .main, .container {
+                display: block !important;
+                height: auto !important;
+                overflow: visible !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .day {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+                background: #111726 !important;
+                border: 1px solid #27314a;
+            }
+            .timeline {
+                background: repeating-linear-gradient(to right, #27314a 0px, #27314a 1px, transparent 1px, transparent calc(100% / 24)) !important;
+            }
+            .track {
+                background: #0f1524 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -91,6 +130,9 @@
             </select>
 
             <input id="search" placeholder="🔎 Suche..." oninput="render()">
+            
+            <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
+
             <span class="copyright">© Bernhard Kornberger 2026</span>
         </div>
         
@@ -159,6 +201,11 @@
         icon.innerText = bottom.classList.contains("collapsed") ? "▲" : "▼";
     }
 
+    function exportPDF() {
+        // Öffnet den Druckdialog des Browsers, der direkt auf Querformat / PDF eingestellt ist
+        window.print();
+    }
+
     function tmin(t) { let [h,m]=t.split(":").map(Number); return h*60+m; }
 
     function render() {
@@ -194,12 +241,17 @@
                     if(!layers[assignedLayer]) layers[assignedLayer] = []; layers[assignedLayer].push({start: s1, end: e1});
                     d.style.left = s1/1440*100 + "%"; d.style.width = (e1-s1)/1440*100 + "%"; d.style.top = assignedLayer*24 + "px";
                     d.style.background = knoloData.find(x => x.ZugNr === t.zug) ? "#166534" : (t.farbe || "#e2001a");
-                    d.innerText = t.zug; if(selectedIndex === t.index) d.classList.add("highlight");
+                    
+                    // Beschriftung inkl. Zeiten im Balken
+                    d.innerText = `${t.zug} (${t.von}-${t.bis})`; 
+                    d.title = `${t.zug}: ${t.von} bis ${t.bis}`;
+
+                    if(selectedIndex === t.index) d.classList.add("highlight");
                     d.onclick = (e) => { e.stopPropagation(); selectedIndex = t.index; document.getElementById("tag").value=t.tag; document.getElementById("gleis").value=t.gleis; document.getElementById("zug").value=t.zug; document.getElementById("von").value=t.von; document.getElementById("bis").value=t.bis; document.getElementById("zugSearch").value=t.zug; searchKNOLO(); render(); };
                     tl.appendChild(d);
                 });
                 tl.style.height = (Math.max(layers.length, 1) * 24 + 4) + "px";
-                let track = document.createElement("div"); track.innerHTML = `<div class='track-title'>${gleis}</div>`; track.className = "track";
+                let track = document.createElement("div"); track.className = "track"; track.innerHTML = `<div class='track-title'>${gleis}</div>`;
                 track.appendChild(tl); day.appendChild(track);
             });
             app.appendChild(day);
