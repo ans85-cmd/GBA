@@ -53,9 +53,6 @@
         .logo { max-width:120px; height:auto; }
         .copyright { margin-left: auto; font-size: 11px; color: #FFFFFF; white-space: nowrap; padding-left: 10px; }
 
-        /* ========================================== */
-        /* STYLES FÜR DEN PDF- / DRUCK-EXPORT        */
-        /* ========================================== */
         @media print {
             @page {
                 size: A4 landscape;
@@ -91,7 +88,7 @@
                 background: #e9ecef !important;
                 color: #000000 !important;
             }
-            /* WICHTIG: Verhindert das Zerreißen einzelner Gleise beim Seitenwechsel */
+
             .track {
                 page-break-inside: avoid;
                 break-inside: avoid;
@@ -116,7 +113,7 @@
         <div class="logo-container"><img src="logo.png" alt="Logo" class="logo"></div>     
         <button onclick="toggleSidebar()">☰</button>        
         <button onclick="window.open('https://ans85-cmd.github.io/AbstellAPP/AbstellAPP.html', '_blank')">🚆 AbstellA</button>
-        <button onclick="exportJSON()">⬇ Export</button>
+        <button onclick="exportJSON()">⬇ Speichern</button>
         <button onclick="clearAll()">🗑 Reset</button>
         <button onclick="deleteSelected()">❌ Löschen</button>
         <button onclick="clearSelection()">↩ Auswahl</button>
@@ -136,7 +133,7 @@
             <button onclick="addEntry()">Speichern</button>
 
             <select id="filterTag" onchange="render()">
-                <option value="alle">📅 Alle Tage</option>
+                <option value="alle">📅 WOCHE</option>
                 <option>Montag</option>
                 <option>Dienstag</option>
                 <option>Mittwoch</option>
