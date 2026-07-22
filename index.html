@@ -13,7 +13,7 @@
         .sidebar.collapsed { width: 60px; }
         button { background:var(--accent); border:none; padding:8px; color:white; border-radius:6px; cursor:pointer; }
         .main { flex:1; display:flex; flex-direction:column; }
-        .header { background-image: url('bg.jpg'); padding:8px; display:flex; gap:6px; flex-wrap:wrap; }
+        .header { background-image: url('bg.jpg'); padding:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
         input, select { background:var(--panel2); border:1px solid #2a3450; color:white; padding:6px; }
         .container { flex:1; display:flex; gap:10px; padding:10px; overflow:auto; }
         .day { min-width:280px; background:var(--panel); }
@@ -78,6 +78,18 @@
             <input id="bis" type="time">
             <input id="farbe" type="color" value="#e2001a">
             <button onclick="addEntry()">Speichern</button>
+
+            <select id="filterTag" onchange="render()">
+                <option value="alle">📅 Alle Tage</option>
+                <option>Montag</option>
+                <option>Dienstag</option>
+                <option>Mittwoch</option>
+                <option>Donnerstag</option>
+                <option>Freitag</option>
+                <option>Samstag</option>
+                <option>Sonntag</option>
+            </select>
+
             <input id="search" placeholder="🔎 Suche..." oninput="render()">
             <span class="copyright">© Bernhard Kornberger 2026</span>
         </div>
@@ -153,8 +165,13 @@
         let app = document.getElementById("app"); app.innerHTML = "";
         let g = {};        
         let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase() : "";
+        let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
         data.forEach((d, i) => {
+            // 1. Tag-Filter prüfen
+            if (selectedFilterTag !== "alle" && d.tag !== selectedFilterTag) return;
+
+            // 2. Suchbegriff-Filter prüfen
             if (searchQuery) {
                 let matchesZug = d.zug && d.zug.toLowerCase().includes(searchQuery);
                 let matchesGleis = d.gleis && d.gleis.toLowerCase().includes(searchQuery);
@@ -182,7 +199,7 @@
                     tl.appendChild(d);
                 });
                 tl.style.height = (Math.max(layers.length, 1) * 24 + 4) + "px";
-                let track = document.createElement("div"); track.className = "track"; track.innerHTML = `<div class='track-title'>${gleis}</div>`;
+                let track = document.createElement("div"); track.innerHTML = `<div class='track-title'>${gleis}</div>`; track.className = "track";
                 track.appendChild(tl); day.appendChild(track);
             });
             app.appendChild(day);
