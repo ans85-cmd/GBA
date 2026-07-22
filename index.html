@@ -221,7 +221,7 @@
 
     function render() {
         let app = document.getElementById("app"); app.innerHTML = "";
-        let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase() : "";
+        let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase().trim() : "";
         let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
         let alleGleiseSet = new Set();
@@ -238,11 +238,25 @@
         Object.keys(g).sort((a,b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {
             if (selectedFilterTag !== "alle" && tag !== selectedFilterTag) return;
 
+            let gleiseFuerTag = alleGleise;
+            if (searchQuery !== "") {
+                gleiseFuerTag = alleGleise.filter(gleis => {
+                    let eintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
+                    return eintraege.some(t => {
+                        let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);
+                        let matchesGleis = t.gleis && t.gleis.toLowerCase().includes(searchQuery);
+                        return matchesZug || matchesGleis;
+                    });
+                });
+
+                if (gleiseFuerTag.length === 0) return;
+            }
+
             let day = document.createElement("div"); 
             day.className = "day"; 
             day.innerHTML = `<div class='day-header'>${tag}</div>`;
 
-            alleGleise.forEach(gleis => {
+            gleiseFuerTag.forEach(gleis => {
                 let track = document.createElement("div"); 
                 track.className = "track"; 
                 track.innerHTML = `<div class='track-title'>${gleis}</div>`;
@@ -267,13 +281,6 @@
                 let layers = [];
                 let gleisEintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
 
-                gleisEintraege = gleisEintraege.filter(t => {
-                    if (!searchQuery) return true;
-                    let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);
-                    let matchesGleis = t.gleis && t.gleis.toLowerCase().includes(searchQuery);
-                    return matchesZug || matchesGleis;
-                });
-
                 gleisEintraege.forEach(t => {
                     let d = document.createElement("div"); 
                     d.className = "train";
@@ -296,7 +303,14 @@
                     d.innerText = t.zug; 
                     d.title = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, ${gleis})`;
 
-                    if(selectedIndex === t.index) d.classList.add("highlight");
+                    let matchesSearch = searchQuery !== "" && (
+                        (t.zug && t.zug.toLowerCase().includes(searchQuery)) || 
+                        (t.gleis && t.gleis.toLowerCase().includes(searchQuery))
+                    );
+
+                    if(selectedIndex === t.index || matchesSearch) {
+                        d.classList.add("highlight");
+                    }
 
                     d.ondragstart = (e) => {
                         e.dataTransfer.setData("text/plain", t.index);
