@@ -8,16 +8,19 @@
         body { visibility: hidden; }
         :root { --bg:#0a0d14; --panel:#111726; --panel2:#1b2336; --accent:#e2001a; --grid:#27314a; --highlight:#ffd600; }
         body { margin:0; font-family:Segoe UI; background:var(--bg); color:white; }
-        .app { display:flex; height:100vh; }
+        .app { display:flex; height:100vh; overflow: hidden; }
         .sidebar { width: 220px; background-image: url('bg.jpg'); background-size: cover; padding:10px; gap:10px; display:flex; flex-direction:column; }
         .sidebar.collapsed { width: 60px; }
         button { background:var(--accent); border:none; padding:8px; color:white; border-radius:6px; cursor:pointer; }
-        .main { flex:1; display:flex; flex-direction:column; }
-        .header { background-image: url('bg.jpg'); padding:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+        .main { flex:1; display:flex; flex-direction:column; height: 100vh; overflow: hidden; }
+        .header { background-image: url('bg.jpg'); padding:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; flex-shrink: 0; }
         input, select { background:var(--panel2); border:1px solid #2a3450; color:white; padding:6px; }
-        .container { flex:1; display:flex; gap:10px; padding:10px; overflow:auto; }
         
-        .day { min-width:320px; flex: 1; background:var(--panel); display: flex; flex-direction: column; border-radius: 6px; overflow: hidden; max-height: 100%; }
+        /* NEU: Der Hauptcontainer scrollt jetzt als Ganzes für die gesamte Woche */
+        .container { flex:1; display:flex; gap:10px; padding:10px; overflow-y:auto; overflow-x:auto; align-items: flex-start; }
+        
+        /* NEU: Kein innerer Scrollbalken mehr pro Tag, sondern fließend */
+        .day { min-width:320px; flex: 1; background:var(--panel); display: flex; flex-direction: column; border-radius: 6px; overflow: hidden; }
         .day-header { padding:8px; text-align:center; background:var(--panel2); font-weight:bold; position: sticky; top: 0; z-index: 10; }
         
         .tracks-container {
@@ -25,8 +28,6 @@
             flex-direction: column;
             gap: 6px;
             padding: 8px;
-            overflow-y: auto;
-            flex: 1;
         }
 
         .track { background:#0f1524; padding:6px; border-radius: 4px; border: 1px solid #1b2336; }
@@ -37,7 +38,7 @@
         .train:active { cursor: grabbing; }
         .highlight { outline:2px solid var(--highlight); box-shadow:0 0 8px var(--highlight); }
         
-        .bottom { background:#0f1524; border-top:2px solid var(--accent); display:flex; flex-direction:column; transition: all 0.3s ease; }
+        .bottom { background:#0f1524; border-top:2px solid var(--accent); display:flex; flex-direction:column; transition: all 0.3s ease; flex-shrink: 0; }
         .bottom-header { 
             padding: 8px; 
             background: var(--panel2);
@@ -53,7 +54,7 @@
             align-items: center;
         }
         .bottom-controls { padding: 6px; }
-        .bottom-table { flex:1; overflow:auto; max-height: 200px; }
+        .bottom-table { overflow:auto; max-height: 150px; }
         .bottom.collapsed .bottom-controls,
         .bottom.collapsed .bottom-table { display: none; }
 
@@ -262,18 +263,7 @@
 
             let gleiseFuerTag = alleGleise;
 
-            // GEÄNDERT: In der Wochenansicht zeigen wir NUR Gleise, auf denen echte Züge (Zahlen) liegen!
-            // Text-Einträge wie "WESTBAHN", "FREI" oder "Abstellung" blenden wir in der Gesamtübersicht aus, damit sie clean wird.
-            if (selectedFilterTag === "alle" && gewuenschteGleise.length === 0) {
-                let gleiseMitEchtenZuegen = [];
-                if (g[tag]) {
-                    Object.keys(g[tag]).forEach(gleis => {
-                        let hatEchtenZug = g[tag][gleis].some(t => /\d/.test(t.zug)); // Prüft ob eine Ziffer im Zugnamen ist
-                        if (hatEchtenZug) gleiseMitEchtenZuegen.push(gleis);
-                    });
-                }
-                gleiseFuerTag = gleiseFuerTag.filter(gleis => gleiseMitEchtenZuegen.includes(gleis));
-            } else if (gewuenschteGleise.length > 0) {
+            if (gewuenschteGleise.length > 0) {
                 gleiseFuerTag = alleGleise.filter(gleis => 
                     gewuenschteGleise.some(gF => String(gleis).toLowerCase().includes(gF))
                 );
@@ -290,7 +280,7 @@
                 });
             }
 
-            if (gleiseFuerTag.length === 0) return;
+            if (gleiseFuerTag.length === 0 && (searchQuery !== "" || gewuenschteGleise.length > 0)) return;
 
             let day = document.createElement("div"); 
             day.className = "day"; 
