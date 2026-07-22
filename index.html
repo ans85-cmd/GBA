@@ -16,12 +16,14 @@
         .header { background-image: url('bg.jpg'); padding:8px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
         input, select { background:var(--panel2); border:1px solid #2a3450; color:white; padding:6px; }
         .container { flex:1; display:flex; gap:10px; padding:10px; overflow:auto; }
-        .day { min-width:280px; background:var(--panel); }
+        .day { min-width:280px; background:var(--panel); display: flex; flex-direction: column; }
         .day-header { padding:6px; text-align:center; background:var(--panel2); font-weight:bold; }
         .track { background:#0f1524; margin:6px; padding:6px; }
         .track-title { color:#e2001a; font-size:12px; font-weight:bold; }
         .timeline { position:relative; min-height:30px; background: repeating-linear-gradient(to right, var(--grid) 0px, var(--grid) 1px, transparent 1px, transparent calc(100% / 24)); }
-        .train { position:absolute; height:22px; font-size:10px; line-height:22px; text-align:center; cursor:pointer; font-weight:bold; border-radius:3px; }
+        .timeline.drag-over { background-color: rgba(226, 0, 26, 0.15); outline: 1px dashed var(--accent); }
+        .train { position:absolute; height:22px; font-size:10px; line-height:22px; text-align:center; cursor:grab; font-weight:bold; border-radius:3px; user-select: none; }
+        .train:active { cursor: grabbing; }
         .highlight { outline:2px solid var(--highlight); box-shadow:0 0 8px var(--highlight); }
         
         /* Bereich: Auswertung KNOLO (Einklappbar) */
@@ -53,6 +55,9 @@
         .logo { max-width:120px; height:auto; }
         .copyright { margin-left: auto; font-size: 11px; color: #FFFFFF; white-space: nowrap; padding-left: 10px; }
 
+        /* ========================================== */
+        /* STYLES FÜR DEN PDF- / DRUCK-EXPORT        */
+        /* ========================================== */
         @media print {
             @page {
                 size: A4 landscape;
@@ -88,7 +93,6 @@
                 background: #e9ecef !important;
                 color: #000000 !important;
             }
-
             .track {
                 page-break-inside: avoid;
                 break-inside: avoid;
@@ -113,7 +117,7 @@
         <div class="logo-container"><img src="logo.png" alt="Logo" class="logo"></div>     
         <button onclick="toggleSidebar()">☰</button>        
         <button onclick="window.open('https://ans85-cmd.github.io/AbstellAPP/AbstellAPP.html', '_blank')">🚆 AbstellA</button>
-        <button onclick="exportJSON()">⬇ Speichern</button>
+        <button onclick="exportJSON()">⬇ Export</button>
         <button onclick="clearAll()">🗑 Reset</button>
         <button onclick="deleteSelected()">❌ Löschen</button>
         <button onclick="clearSelection()">↩ Auswahl</button>
@@ -133,7 +137,7 @@
             <button onclick="addEntry()">Speichern</button>
 
             <select id="filterTag" onchange="render()">
-                <option value="alle">📅 WOCHE</option>
+                <option value="alle">📅 Alle Tage</option>
                 <option>Montag</option>
                 <option>Dienstag</option>
                 <option>Mittwoch</option>
@@ -221,46 +225,114 @@
 
     function render() {
         let app = document.getElementById("app"); app.innerHTML = "";
-        let g = {};        
         let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase() : "";
         let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
+        // 1. Alle weltweit vorhandenen Gleise ermitteln und alphabetisch/numerisch sortieren (für synchrone Zeilen)
+        let alleGleiseSet = new Set();
+        data.forEach(d => { if(d.gleis) alleGleiseSet.add(d.gleis); });
+        let alleGleise = Array.from(alleGleiseSet).sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
+
+        // 2. Daten strukturieren nach Tag -> Gleis
+        let g = {};
         data.forEach((d, i) => {
-            if (selectedFilterTag !== "alle" && d.tag !== selectedFilterTag) return;
-
-            if (searchQuery) {
-                let matchesZug = d.zug && d.zug.toLowerCase().includes(searchQuery);
-                let matchesGleis = d.gleis && d.gleis.toLowerCase().includes(searchQuery);
-                if (!matchesZug && !matchesGleis) return;
-            }
-
-            g[d.tag] ??= {}; g[d.tag][d.gleis] ??= [];
+            g[d.tag] ??= {}; 
+            g[d.tag][d.gleis] ??= [];
             g[d.tag][d.gleis].push({...d, index: i});
         });
 
+        // 3. Tage rendern
         Object.keys(g).sort((a,b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {
-            let day = document.createElement("div"); day.className = "day"; day.innerHTML = `<div class='day-header'>${tag}</div>`;
-            Object.keys(g[tag]).forEach(gleis => {
-                let tl = document.createElement("div"); tl.className = "timeline"; let layers = [];
-                g[tag][gleis].forEach(t => {
-                    let d = document.createElement("div"); d.className = "train";
+            if (selectedFilterTag !== "alle" && tag !== selectedFilterTag) return;
+
+            let day = document.createElement("div"); 
+            day.className = "day"; 
+            day.innerHTML = `<div class='day-header'>${tag}</div>`;
+
+            // Fester Durchlauf ALLER Gleise, damit die Zeilen exakt synchron bleiben
+            alleGleise.forEach(gleis => {
+                let track = document.createElement("div"); 
+                track.className = "track"; 
+                track.innerHTML = `<div class='track-title'>${gleis}</div>`;
+                
+                let tl = document.createElement("div"); 
+                tl.className = "timeline"; 
+                
+                // Drag & Drop Zieleinrichtung für dieses Gleis an diesem Tag
+                tl.ondragover = (e) => { e.preventDefault(); tl.classList.add("drag-over"); };
+                tl.ondragleave = () => { tl.classList.remove("drag-over"); };
+                tl.ondrop = (e) => {
+                    e.preventDefault();
+                    tl.classList.remove("drag-over");
+                    let draggedIdx = e.dataTransfer.getData("text/plain");
+                    if (draggedIdx !== "") {
+                        data[draggedIdx].tag = tag;
+                        data[draggedIdx].gleis = gleis;
+                        selectedIndex = Number(draggedIdx);
+                        render();
+                    }
+                };
+
+                let layers = [];
+                let gleisEintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
+
+                // Filter prüfen (Suchbegriff)
+                gleisEintraege = gleisEintraege.filter(t => {
+                    if (!searchQuery) return true;
+                    let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);
+                    let matchesGleis = t.gleis && t.gleis.toLowerCase().includes(searchQuery);
+                    return matchesZug || matchesGleis;
+                });
+
+                gleisEintraege.forEach(t => {
+                    let d = document.createElement("div"); 
+                    d.className = "train";
+                    d.draggable = true; // HTML5 Drag & Drop aktivieren
+
                     let s1 = tmin(t.von), e1 = tmin(t.bis);
                     let assignedLayer = 0;
-                    for(let l=0; l<layers.length; l++) { if(!layers[l].some(ex => (s1 < ex.end && e1 > ex.start))) { assignedLayer = l; break; } assignedLayer = l + 1; }
-                    if(!layers[assignedLayer]) layers[assignedLayer] = []; layers[assignedLayer].push({start: s1, end: e1});
-                    d.style.left = s1/1440*100 + "%"; d.style.width = (e1-s1)/1440*100 + "%"; d.style.top = assignedLayer*24 + "px";
+                    for(let l=0; l<layers.length; l++) { 
+                        if(!layers[l].some(ex => (s1 < ex.end && e1 > ex.start))) { assignedLayer = l; break; } 
+                        assignedLayer = l + 1; 
+                    }
+                    if(!layers[assignedLayer]) layers[assignedLayer] = []; 
+                    layers[assignedLayer].push({start: s1, end: e1});
+
+                    d.style.left = s1/1440*100 + "%"; 
+                    d.style.width = (e1-s1)/1440*100 + "%"; 
+                    d.style.top = assignedLayer*24 + "px";
                     d.style.background = knoloData.find(x => x.ZugNr === t.zug) ? "#166534" : (t.farbe || "#e2001a");
                     
                     d.innerText = t.zug; 
-                    d.title = `${t.zug}: ${t.von} bis ${t.bis}`;
+                    d.title = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, ${gleis})`;
 
                     if(selectedIndex === t.index) d.classList.add("highlight");
-                    d.onclick = (e) => { e.stopPropagation(); selectedIndex = t.index; document.getElementById("tag").value=t.tag; document.getElementById("gleis").value=t.gleis; document.getElementById("zug").value=t.zug; document.getElementById("von").value=t.von; document.getElementById("bis").value=t.bis; document.getElementById("zugSearch").value=t.zug; searchKNOLO(); render(); };
+
+                    // Start des Ziehens (Drag & Drop)
+                    d.ondragstart = (e) => {
+                        e.dataTransfer.setData("text/plain", t.index);
+                    };
+
+                    // Klick-Auswahl fürs Formular
+                    d.onclick = (e) => { 
+                        e.stopPropagation(); 
+                        selectedIndex = t.index; 
+                        document.getElementById("tag").value=t.tag; 
+                        document.getElementById("gleis").value=t.gleis; 
+                        document.getElementById("zug").value=t.zug; 
+                        document.getElementById("von").value=t.von; 
+                        document.getElementById("bis").value=t.bis; 
+                        document.getElementById("zugSearch").value=t.zug; 
+                        searchKNOLO(); 
+                        render(); 
+                    };
+
                     tl.appendChild(d);
                 });
+
                 tl.style.height = (Math.max(layers.length, 1) * 24 + 4) + "px";
-                let track = document.createElement("div"); track.className = "track"; track.innerHTML = `<div class='track-title'>${gleis}</div>`;
-                track.appendChild(tl); day.appendChild(track);
+                track.appendChild(tl); 
+                day.appendChild(track);
             });
             app.appendChild(day);
         });
