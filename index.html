@@ -147,7 +147,6 @@
             <input id="farbe" type="color" value="#e2001a">
             <button onclick="addEntry()">Belegung Speichern</button>
 
-            <!-- Wochentag-Filter (Standardmäßig auf WOCHE oder direkt einen Tag wählen) -->
             <select id="filterTag" onchange="render()">
                 <option value="alle">📅 WOCHE</option>
                 <option>Montag</option>
@@ -263,7 +262,12 @@
 
             let gleiseFuerTag = alleGleise;
 
-            if (gewuenschteGleise.length > 0) {
+            // NEU: Wenn die Wochenansicht aktiv ist und KEIN manueller Gleis-Filter gesetzt wurde,
+            // zeigen wir an jedem Tag NUR die Gleise an, die an diesem Tag auch tatsächlich belegt sind!
+            if (selectedFilterTag === "alle" && gewuenschteGleise.length === 0) {
+                let belegteGleiseAnDiesemTag = Object.keys(g[tag] || {});
+                gleiseFuerTag = alleGleise.filter(gleis => belegteGleiseAnDiesemTag.includes(gleis));
+            } else if (gewuenschteGleise.length > 0) {
                 gleiseFuerTag = alleGleise.filter(gleis => 
                     gewuenschteGleise.some(gF => String(gleis).toLowerCase().includes(gF))
                 );
@@ -280,7 +284,7 @@
                 });
             }
 
-            if (gleiseFuerTag.length === 0 && (searchQuery !== "" || gewuenschteGleise.length > 0)) return;
+            if (gleiseFuerTag.length === 0) return;
 
             let day = document.createElement("div"); 
             day.className = "day"; 
