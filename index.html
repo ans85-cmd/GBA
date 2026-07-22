@@ -223,8 +223,8 @@
     function toggleSidebar() { document.getElementById("sidebar").classList.toggle("collapsed"); }
     
     function toggleBottom() {
-        const bottom = document.getElementById("bottomPanel");
-        const icon = document.getElementById("bottomToggleIcon");
+        let bottom = document.getElementById("bottomPanel");
+        let icon = document.getElementById("bottomToggleIcon");
         bottom.classList.toggle("collapsed");
         icon.innerText = bottom.classList.contains("collapsed") ? "▲" : "▼";
     }
@@ -262,11 +262,17 @@
 
             let gleiseFuerTag = alleGleise;
 
-            // NEU: Wenn die Wochenansicht aktiv ist und KEIN manueller Gleis-Filter gesetzt wurde,
-            // zeigen wir an jedem Tag NUR die Gleise an, die an diesem Tag auch tatsächlich belegt sind!
+            // GEÄNDERT: In der Wochenansicht zeigen wir NUR Gleise, auf denen echte Züge (Zahlen) liegen!
+            // Text-Einträge wie "WESTBAHN", "FREI" oder "Abstellung" blenden wir in der Gesamtübersicht aus, damit sie clean wird.
             if (selectedFilterTag === "alle" && gewuenschteGleise.length === 0) {
-                let belegteGleiseAnDiesemTag = Object.keys(g[tag] || {});
-                gleiseFuerTag = alleGleise.filter(gleis => belegteGleiseAnDiesemTag.includes(gleis));
+                let gleiseMitEchtenZuegen = [];
+                if (g[tag]) {
+                    Object.keys(g[tag]).forEach(gleis => {
+                        let hatEchtenZug = g[tag][gleis].some(t => /\d/.test(t.zug)); // Prüft ob eine Ziffer im Zugnamen ist
+                        if (hatEchtenZug) gleiseMitEchtenZuegen.push(gleis);
+                    });
+                }
+                gleiseFuerTag = gleiseFuerTag.filter(gleis => gleiseMitEchtenZuegen.includes(gleis));
             } else if (gewuenschteGleise.length > 0) {
                 gleiseFuerTag = alleGleise.filter(gleis => 
                     gewuenschteGleise.some(gF => String(gleis).toLowerCase().includes(gF))
