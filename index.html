@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>GBA 1.0</title>
+    <title>GBA 2.0</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body { visibility: hidden; }
@@ -26,7 +26,6 @@
         .train:active { cursor: grabbing; }
         .highlight { outline:2px solid var(--highlight); box-shadow:0 0 8px var(--highlight); }
         
-        /* Bereich: Auswertung KNOLO (Einklappbar) */
         .bottom { background:#0f1524; border-top:2px solid var(--accent); display:flex; flex-direction:column; transition: all 0.3s ease; }
         .bottom-header { 
             padding: 8px; 
@@ -55,9 +54,6 @@
         .logo { max-width:120px; height:auto; }
         .copyright { margin-left: auto; font-size: 11px; color: #FFFFFF; white-space: nowrap; padding-left: 10px; }
 
-        /* ========================================== */
-        /* STYLES FÜR DEN PDF- / DRUCK-EXPORT        */
-        /* ========================================== */
         @media print {
             @page {
                 size: A4 landscape;
@@ -71,7 +67,7 @@
                 print-color-adjust: exact !important;
             }
             .sidebar, .header, .bottom {
-                display: none !important; /* Versteckt Bedienelemente im PDF */
+                display: none !important;
             }
             .app, .main, .container {
                 display: block !important;
@@ -134,10 +130,10 @@
             <input id="von" type="time">
             <input id="bis" type="time">
             <input id="farbe" type="color" value="#e2001a">
-            <button onclick="addEntry()">Speichern</button>
+            <button onclick="addEntry()">Belegung Speichern</button>
 
             <select id="filterTag" onchange="render()">
-                <option value="alle">📅 Alle Tage</option>
+                <option value="alle">📅 WOCHE</option>
                 <option>Montag</option>
                 <option>Dienstag</option>
                 <option>Mittwoch</option>
@@ -151,7 +147,7 @@
             
             <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
 
-            <span class="copyright">© Bernhard Kornberger 2026</span>
+            <span class="copyright">GBA Version 2.0 (Update 22/07/2026) © Bernhard Kornberger 2026</span>
         </div>
         
         <div id="app" class="container"></div>
@@ -228,12 +224,10 @@
         let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase() : "";
         let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
-        // 1. Alle weltweit vorhandenen Gleise ermitteln und alphabetisch/numerisch sortieren (für synchrone Zeilen)
         let alleGleiseSet = new Set();
         data.forEach(d => { if(d.gleis) alleGleiseSet.add(d.gleis); });
         let alleGleise = Array.from(alleGleiseSet).sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
 
-        // 2. Daten strukturieren nach Tag -> Gleis
         let g = {};
         data.forEach((d, i) => {
             g[d.tag] ??= {}; 
@@ -241,7 +235,6 @@
             g[d.tag][d.gleis].push({...d, index: i});
         });
 
-        // 3. Tage rendern
         Object.keys(g).sort((a,b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {
             if (selectedFilterTag !== "alle" && tag !== selectedFilterTag) return;
 
@@ -249,7 +242,6 @@
             day.className = "day"; 
             day.innerHTML = `<div class='day-header'>${tag}</div>`;
 
-            // Fester Durchlauf ALLER Gleise, damit die Zeilen exakt synchron bleiben
             alleGleise.forEach(gleis => {
                 let track = document.createElement("div"); 
                 track.className = "track"; 
@@ -258,7 +250,6 @@
                 let tl = document.createElement("div"); 
                 tl.className = "timeline"; 
                 
-                // Drag & Drop Zieleinrichtung für dieses Gleis an diesem Tag
                 tl.ondragover = (e) => { e.preventDefault(); tl.classList.add("drag-over"); };
                 tl.ondragleave = () => { tl.classList.remove("drag-over"); };
                 tl.ondrop = (e) => {
@@ -276,7 +267,6 @@
                 let layers = [];
                 let gleisEintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
 
-                // Filter prüfen (Suchbegriff)
                 gleisEintraege = gleisEintraege.filter(t => {
                     if (!searchQuery) return true;
                     let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);
@@ -287,7 +277,7 @@
                 gleisEintraege.forEach(t => {
                     let d = document.createElement("div"); 
                     d.className = "train";
-                    d.draggable = true; // HTML5 Drag & Drop aktivieren
+                    d.draggable = true;
 
                     let s1 = tmin(t.von), e1 = tmin(t.bis);
                     let assignedLayer = 0;
@@ -308,12 +298,10 @@
 
                     if(selectedIndex === t.index) d.classList.add("highlight");
 
-                    // Start des Ziehens (Drag & Drop)
                     d.ondragstart = (e) => {
                         e.dataTransfer.setData("text/plain", t.index);
                     };
 
-                    // Klick-Auswahl fürs Formular
                     d.onclick = (e) => { 
                         e.stopPropagation(); 
                         selectedIndex = t.index; 
