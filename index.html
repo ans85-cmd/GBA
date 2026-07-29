@@ -12,7 +12,6 @@
             background: var(--bg); 
             color: white; 
         }
-
         :root { 
             --bg: #0a0d14; 
             --panel: #111726; 
@@ -21,13 +20,11 @@
             --grid: #27314a; 
             --highlight: #ffd600; 
         }
-
         .app { 
             display: flex; 
             height: 100vh; 
             overflow: hidden; 
         }
-
         .sidebar { 
             width: 220px; 
             background-image: url('bg.jpg'); 
@@ -37,11 +34,9 @@
             display: flex; 
             flex-direction: column; 
         }
-
         .sidebar.collapsed { 
             width: 60px; 
         }
-
         button { 
             background: var(--accent); 
             border: none; 
@@ -50,7 +45,6 @@
             border-radius: 6px; 
             cursor: pointer; 
         }
-
         .main { 
             flex: 1; 
             display: flex; 
@@ -58,7 +52,6 @@
             height: 100vh; 
             overflow: hidden; 
         }
-
         .header { 
             background-image: url('bg.jpg'); 
             padding: 8px 12px; 
@@ -68,7 +61,6 @@
             align-items: center; 
             flex-shrink: 0; 
         }
-
         .header-group {
             display: flex;
             gap: 6px;
@@ -78,36 +70,30 @@
             border-radius: 6px;
             border: 1px solid #2a3450;
         }
-
         .header-group.creation {
             border-color: rgba(226, 0, 26, 0.4);
             box-shadow: inset 0 0 10px rgba(226, 0, 26, 0.05);
         }
-
         .header-group.filter {
             border-color: #27314a;
         }
-
         .header-divider {
             width: 1px;
             height: 32px;
             background: #2a3450;
             margin: 0 4px;
         }
-
         input, select { 
             background: var(--panel2); 
             border: 1px solid #2a3450; 
             color: white; 
             padding: 6px; 
-            border-radius: 4px;
+            border-radius: 4px; 
         }
-
         .multiselect {
             position: relative;
             display: inline-block;
         }
-
         .select-box {
             background: var(--panel2);
             border: 1px solid #2a3450;
@@ -122,13 +108,11 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .select-box:after {
             content: " ▼";
             font-size: 10px;
             color: #888;
         }
-
         .checkboxes {
             display: none;
             position: absolute;
@@ -144,7 +128,6 @@
             padding: 6px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
-
         .checkboxes label {
             display: flex;
             align-items: center;
@@ -154,11 +137,9 @@
             cursor: pointer;
             color: #ddd;
         }
-
         .checkboxes label:hover {
             background: rgba(255,255,255,0.05);
         }
-
         .container { 
             flex: 1; 
             display: flex; 
@@ -168,7 +149,6 @@
             overflow-x: auto; 
             align-items: flex-start; 
         }
-
         .day { 
             min-width: 320px; 
             flex: 1; 
@@ -178,7 +158,6 @@
             border-radius: 6px; 
             overflow: hidden; 
         }
-
         .day-header { 
             padding: 8px; 
             text-align: center; 
@@ -188,39 +167,33 @@
             top: 0; 
             z-index: 10; 
         }
-
         .tracks-container { 
             display: flex; 
             flex-direction: column; 
             gap: 6px; 
             padding: 8px; 
         }
-
         .track { 
             background: #0f1524; 
             padding: 6px; 
             border-radius: 4px; 
             border: 1px solid #1b2336; 
         }
-
         .track-title { 
             color: #e2001a; 
             font-size: 12px; 
             font-weight: bold; 
             margin-bottom: 4px; 
         }
-
         .timeline { 
             position: relative; 
             min-height: 30px; 
             background: repeating-linear-gradient(to right, var(--grid) 0px, var(--grid) 1px, transparent 1px, transparent calc(100% / 24)); 
         }
-
         .timeline.drag-over { 
             background-color: rgba(226, 0, 26, 0.15); 
             outline: 1px dashed var(--accent); 
         }
-
         .train { 
             position: absolute; 
             height: 22px; 
@@ -233,11 +206,9 @@
             user-select: none; 
             overflow: visible; 
         }
-
         .train:active { 
             cursor: grabbing; 
         }
-
         .warning-dot {
             position: absolute;
             top: -4px;
@@ -249,12 +220,10 @@
             border: 1px solid white;
             box-shadow: 0 0 4px #ff0000;
         }
-
         .highlight { 
             outline: 2px solid var(--highlight); 
             box-shadow: 0 0 8px var(--highlight); 
         }
-
         .bottom { 
             background: #0f1524; 
             border-top: 2px solid var(--accent); 
@@ -263,7 +232,6 @@
             transition: all 0.3s ease; 
             flex-shrink: 0; 
         }
-
         .bottom-header { 
             padding: 8px; 
             background: var(--panel2); 
@@ -278,56 +246,46 @@
             justify-content: space-between; 
             align-items: center; 
         }
-
         .bottom-controls { 
             padding: 6px; 
         }
-
         .bottom-table { 
             overflow: auto; 
             max-height: 150px; 
         }
-
-        .bottom.collapsed .bottom-controls,
+        .bottom.collapsed .bottom-controls, 
         .bottom.collapsed .bottom-table { 
             display: none; 
         }
-
         table { 
             width: auto; 
             min-width: 100%; 
             border-collapse: collapse; 
         }
-
         th, td { 
             padding: 5px; 
             font-size: 12px; 
             text-align: center; 
             white-space: nowrap; 
         }
-
         th { 
             background: #1b2336; 
             position: sticky; 
             top: 0; 
         }
-
         td { 
             border-bottom: 1px solid #333; 
         }
-
         .logo-container { 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             margin-bottom: 10px; 
         }
-
         .logo { 
             max-width: 120px; 
             height: auto; 
         }
-
         .copyright { 
             margin-left: auto; 
             font-size: 11px; 
@@ -335,7 +293,6 @@
             white-space: nowrap; 
             padding-left: 10px; 
         }
-
         .custom-modal-overlay {
             position: fixed;
             top: 0;
@@ -351,7 +308,6 @@
             opacity: 0;
             animation: fadeIn 0.2s forwards;
         }
-
         .custom-modal {
             background: var(--panel);
             border: 1px solid #2a3450;
@@ -363,20 +319,17 @@
             transform: scale(0.9);
             animation: scaleUp 0.2s forwards;
         }
-
         .custom-modal h3 {
             margin: 0 0 10px 0;
             color: var(--accent);
             font-size: 16px;
         }
-
         .custom-modal p {
             margin: 0 0 20px 0;
             color: #ddd;
             font-size: 13px;
             line-height: 1.4;
         }
-
         .custom-modal button {
             background: var(--accent);
             color: white;
@@ -387,74 +340,70 @@
             font-weight: bold;
             width: 100%;
         }
-
         .custom-modal button:hover {
             opacity: 0.9;
         }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        @keyframes fadeIn { 
+            to { opacity: 1; } 
         }
-
-        @keyframes scaleUp {
-            to { transform: scale(1); }
+        @keyframes scaleUp { 
+            to { transform: scale(1); } 
         }
-
         @media print {
-            @page {
-                size: A3 portrait;
-                margin: 10mm;
+            @page { 
+                size: A3 portrait; 
+                margin: 10mm; 
             }
-            body {
-                visibility: visible !important;
-                background: #ffffff !important;
-                color: #000000 !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+            body { 
+                visibility: visible !important; 
+                background: #ffffff !important; 
+                color: #000000 !important; 
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important; 
             }
-            .sidebar, .header, .bottom {
-                display: none !important;
+            .sidebar, .header, .bottom { 
+                display: none !important; 
             }
-            .app, .main, .container {
-                display: block !important;
-                height: auto !important;
-                overflow: visible !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                background: #ffffff !important;
+            .app, .main, .container { 
+                display: block !important; 
+                height: auto !important; 
+                overflow: visible !important; 
+                padding: 0 !important; 
+                margin: 0 !important; 
+                background: #ffffff !important; 
             }
-            .day {
-                page-break-inside: avoid;
-                break-inside: avoid;
-                margin-bottom: 20px;
-                background: #f8f9fa !important;
-                border: 1px solid #ccc;
-                color: #000000 !important;
-                min-height: 90vh;
+            .day { 
+                page-break-inside: avoid; 
+                break-inside: avoid; 
+                margin-bottom: 20px; 
+                background: #f8f9fa !important; 
+                border: 1px solid #ccc; 
+                color: #000000 !important; 
+                min-height: 90vh; 
             }
-            .day-header {
-                background: #e9ecef !important;
-                color: #000000 !important;
-                font-size: 16px;
+            .day-header { 
+                background: #e9ecef !important; 
+                color: #000000 !important; 
+                font-size: 16px; 
             }
-            .tracks-container {
-                display: block !important;
+            .tracks-container { 
+                display: block !important; 
             }
-            .track {
-                page-break-inside: avoid;
-                break-inside: avoid;
-                background: #ffffff !important;
-                border-bottom: 1px solid #eee;
-                margin-bottom: 6px;
+            .track { 
+                page-break-inside: avoid; 
+                break-inside: avoid; 
+                background: #ffffff !important; 
+                border-bottom: 1px solid #eee; 
+                margin-bottom: 6px; 
             }
-            .timeline {
-                background: repeating-linear-gradient(to right, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent calc(100% / 24)) !important;
+            .timeline { 
+                background: repeating-linear-gradient(to right, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent calc(100% / 24)) !important; 
             }
-            .track-title {
-                color: #333333 !important;
+            .track-title { 
+                color: #333333 !important; 
             }
-            .train {
-                color: #ffffff !important;
+            .train { 
+                color: #ffffff !important; 
             }
         }
     </style>
@@ -475,7 +424,6 @@
             <div class="import-btn" onclick="importFile.click()" style="text-align:center; cursor:pointer; background:#1b2336; padding:8px; border:1px solid #2a3450; border-radius:6px; font-size:12px;">📂 Import</div>
             <input id="importFile" type="file" onchange="importJSON(event)" style="display:none;">
         </div>
-
         <div class="main">
             <div class="header">
                 <div class="header-group creation">
@@ -495,9 +443,7 @@
                     <input id="farbe" type="color" value="#e2001a" style="width: 36px; padding: 2px; cursor: pointer;">
                     <button onclick="addEntry()">Belegung Speichern</button>
                 </div>
-
                 <div class="header-divider"></div>
-
                 <div class="header-group filter">
                     <select id="filterTag" onchange="render()">
                         <option value="alle">📅 WOCHE</option>
@@ -509,22 +455,17 @@
                         <option>Samstag</option>
                         <option>Sonntag</option>
                     </select>
-
                     <div class="multiselect" id="gleisMultiSelect">
                         <div class="select-box" onclick="toggleDropdown()">🛤 Gleise</div>
                         <div class="checkboxes" id="gleisCheckboxes"></div>
                     </div>
-
                     <input id="gleisFilter" placeholder="🛤 Gleis-Filter (z.B. 210)" oninput="render()" style="width: 140px;">
                     <input id="search" placeholder="🔎 Zug-Suche..." oninput="render()" style="width: 120px;">
                     <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
                 </div>
-
                 <span class="copyright">GBA Version 3.0 (Update 29/07/2026) © Bernhard Kornberger 2026</span>
             </div>
-
             <div id="app" class="container"></div>
-
             <div class="bottom" id="bottomPanel">
                 <div class="bottom-header" onclick="toggleBottom()">
                     <span>Auswertung KNOLO</span>
@@ -544,6 +485,25 @@
     </div>
 
     <script>
+        // --- GLOBALER SCHUTZ GEGEN ABSTÜRZE & DATENVERLUST ---
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            console.warn("Absturz abgefangen:", msg);
+            showCustomAlert("Aktion nicht zulässig!", "Sicherheitshinweis");
+            
+            setTimeout(() => {
+                let modalBtn = document.querySelector(".custom-modal button");
+                if (modalBtn) {
+                    modalBtn.innerText = "Zurück";
+                    modalBtn.onclick = function() {
+                        window.location.reload(); 
+                    };
+                }
+            }, 50);
+
+            return true; 
+        };
+        // ----------------------------------------------------
+
         let sbClient;
         let data = [];
         let knoloData = [];
@@ -551,7 +511,7 @@
         let initializedGleise = false;
         const tageReihenfolge = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
 
-        const gleisBereiche = [
+        const gleisBereiche = [            
             { von: 137, bis: 146, farbe: "#0055ff", hinweis: "Wegzeit 11 Minuten" },
             { von: 209, bis: 209, farbe: "#d97706", hinweis: "Wegzeit 32 Minuten" },
             { von: 211, bis: 211, farbe: "#d97706", hinweis: "Wegzeit 32 Minuten" },
@@ -568,332 +528,368 @@
             { von: 255, bis: 267, farbe: "#008000", hinweis: "Keine Wegzeit SbA" }
         ];
 
-        async function initApp() {
-            if (!sbClient) {
-                sbClient = supabase.createClient('https://ppuexopggtveafisbfbz.supabase.co', 'sb_publishable_MdNwEGQxq7JsfCjavTDUVw_MZsCeqlH');
+        async function initApp() {            
+            if (!sbClient) {                
+                sbClient = supabase.createClient('https://ppuexopggtveafisbfbz.supabase.co', 'sb_publishable_MdNwEGQxq7JsfCjavTDUVw_MZsCeqlH');            
             }
             const { data: { session } } = await sbClient.auth.getSession();
-            if (!session) { 
-                window.location.href = 'login.html'; 
-                return; 
+            if (!session) {                 
+                window.location.href = 'login.html';                 
+                return;             
             }
 
-            try {
-                const resp = await fetch('X99.json');
-                if (resp.ok) data = await resp.json();
-            } catch (e) { 
-                console.warn("Kein X99.json gefunden."); 
+            try {                
+                const resp = await fetch('X99.json');                
+                if (resp.ok) data = await resp.json();            
+            } catch (e) {                 
+                console.warn("Kein X99.json gefunden.");             
             }
 
-            await loadKnoloData();
-            document.body.style.visibility = 'visible';
-        }
+            await loadKnoloData();            
+            document.body.style.visibility = 'visible';        }
 
-        async function loadKnoloData() {
-            try {
-                const res = await fetch('knoloData.json');
-                knoloData = await res.json();
-                render();
-            } catch (e) { 
-                render(); 
-            }
-        }
+        async function loadKnoloData() {            
+            try {                
+                const res = await fetch('knoloData.json');                
+                knoloData = await res.json();                
+                render();            
+            } catch (e) {                 
+                render();             
+            }        }
 
-        async function logout() { 
-            await sbClient.auth.signOut(); 
-            window.location.href = 'login.html'; 
-        }
+        async function logout() {             
+            await sbClient.auth.signOut();             
+            window.location.href = 'login.html';         }
 
         initApp();
 
-        function toggleSidebar() { 
-            document.getElementById("sidebar").classList.toggle("collapsed"); 
+        function toggleSidebar() {             
+            document.getElementById("sidebar").classList.toggle("collapsed");         }
+
+        function toggleBottom() {            
+            let bottom = document.getElementById("bottomPanel");            
+            let icon = document.getElementById("bottomToggleIcon");            
+            bottom.classList.toggle("collapsed");            
+            icon.innerText = bottom.classList.contains("collapsed") ? "▲" : "▼";        }
+
+        function toggleDropdown() {            
+            let cb = document.getElementById("gleisCheckboxes");            
+            cb.style.display = cb.style.display === "block" ? "none" : "block";        }
+
+        window.onclick = function(event) {            
+            if (!event.target.closest('#gleisMultiSelect')) {                
+                let cb = document.getElementById("gleisCheckboxes");                
+                if (cb) cb.style.display = "none";            }
         }
 
-        function toggleBottom() {
-            let bottom = document.getElementById("bottomPanel");
-            let icon = document.getElementById("bottomToggleIcon");
-            bottom.classList.toggle("collapsed");
-            icon.innerText = bottom.classList.contains("collapsed") ? "▲" : "▼";
-        }
+        function exportPDF() {             
+            window.print();         }
 
-        function toggleDropdown() {
-            let cb = document.getElementById("gleisCheckboxes");
-            cb.style.display = cb.style.display === "block" ? "none" : "block";
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('#gleisMultiSelect')) {
-                let cb = document.getElementById("gleisCheckboxes");
-                if (cb) cb.style.display = "none";
+        function exportJSON() {
+            try {
+                let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+                let downloadAnchor = document.createElement('a');
+                downloadAnchor.setAttribute("href", dataStr);
+                downloadAnchor.setAttribute("download", "X99.json");
+                document.body.appendChild(downloadAnchor);
+                downloadAnchor.click();
+                downloadAnchor.remove();
+            } catch (e) {
+                showCustomAlert("Fehler beim Exportieren der Daten.", "Fehler");
             }
         }
 
-        function exportPDF() { 
-            window.print(); 
+        function importJSON(event) {
+            let file = event.target.files[0];
+            if (!file) return;
+
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let imported = JSON.parse(e.target.result);
+                    if (Array.isArray(imported)) {
+                        data = imported;
+                        initializedGleise = false;
+                        render();
+                        showCustomAlert("Daten erfolgreich importiert!", "Erfolg");
+                    } else {
+                        showCustomAlert("Ungültiges Dateiformat (kein Array).", "Import-Fehler");
+                    }
+                } catch (err) {
+                    showCustomAlert("Fehler beim Lesen der JSON-Datei.", "Import-Fehler");
+                }
+                event.target.value = "";
+            };
+            reader.onerror = function() {
+                showCustomAlert("Fehler beim Einlesen der Datei.", "Import-Fehler");
+                event.target.value = "";
+            };
+            reader.readAsText(file);
         }
 
-        function tmin(t) { 
-            let [h, m] = t.split(":").map(Number); 
-            return h * 60 + m; 
-        }
-
-        function getBereich(gleisStr) {
-            let gleisNum = parseInt(gleisStr, 10);
-            return gleisBereiche.find(b => !isNaN(gleisNum) && gleisNum >= b.von && gleisNum <= b.bis);
-        }
-
-        function updateGleisCheckboxes(alleGleise) {
-            let container = document.getElementById("gleisCheckboxes");
-            let letcheckedGleise = {};
-            let existingBoxes = container.querySelectorAll("input[type='checkbox']");
-            if (existingBoxes.length > 0) {
-                existingBoxes.forEach(box => {
-                    letcheckedGleise[box.value] = box.checked;
-                });
-            }
-
-            container.innerHTML = "";
-
-            let selectAllLabel = document.createElement("label");
-            selectAllLabel.innerHTML = `<b><input type="checkbox" id="selectAllGleise" checked onchange="toggleAllGleise(this)"> Alle an/abwählen</b>`;
-            container.appendChild(selectAllLabel);
-            container.appendChild(document.createElement("hr"));
-
-            alleGleise.forEach(gleis => {
-                let isChecked = letcheckedGleise[gleis] !== undefined ? letcheckedGleise[gleis] : true;
-                let label = document.createElement("label");
-                label.innerHTML = `<input type="checkbox" value="${gleis}" ${isChecked ? "checked" : ""} onchange="render()"> Gleis ${gleis}`;
-                container.appendChild(label);
-            });
-        }
-
-        function toggleAllGleise(master) {
-            let container = document.getElementById("gleisCheckboxes");
-            let checkboxes = container.querySelectorAll("input[type='checkbox']");
-            checkboxes.forEach(cb => cb.checked = master.checked);
+        function clearAll() {
+            data = [];
+            selectedIndex = null;
+            initializedGleise = false;
             render();
         }
 
-        function render() {
-            let app = document.getElementById("app"); 
-            app.innerHTML = "";
-            let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase().trim() : "";
-            let gleisFilterInput = document.getElementById("gleisFilter") ? document.getElementById("gleisFilter").value.toLowerCase().trim() : "";
+        function deleteSelected() {
+            if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < data.length) {
+                data.splice(selectedIndex, 1);
+                selectedIndex = null;
+                initializedGleise = false;
+                render();
+            } else {
+                showCustomAlert("Kein Eintrag ausgewählt.", "Hinweis");
+            }
+        }
+
+        function clearSelection() {
+            selectedIndex = null;
+            render();
+        }
+
+        function addEntry() {
+            let tag = document.getElementById("tag").value;
+            let gleis = document.getElementById("gleis").value.trim();
+            let zug = document.getElementById("zug").value.trim();
+            let von = document.getElementById("von").value;
+            let bis = document.getElementById("bis").value;
+            let farbe = document.getElementById("farbe").value;
+
+            if (!gleis || !zug || !von || !bis) {
+                showCustomAlert("Bitte alle Felder ausfüllen!", "Fehler");
+                return;
+            }
+
+            if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < data.length) {
+                data[selectedIndex] = { tag, gleis, zug, von, bis, farbe, wegzeitWarning: data[selectedIndex].wegzeitWarning };
+            } else {
+                data.push({ tag, gleis, zug, von, bis, farbe });
+            }
+
+            selectedIndex = null;
+            initializedGleise = false;
+            render();
+        }
+
+        function syncKNOLO() {
+            // Optional / Platzhalter falls benötigt
+        }
+
+        function tmin(t) {             
+            let [h, m] = (t || "00:00").split(":").map(Number);             
+            return h * 60 + m;         }
+
+        function getBereich(gleisStr) {            
+            let gleisNum = parseInt(gleisStr, 10);            
+            return gleisBereiche.find(b => !isNaN(gleisNum) && gleisNum >= b.von && gleisNum <= b.bis);        }
+
+        function updateGleisCheckboxes(alleGleise) {            
+            let container = document.getElementById("gleisCheckboxes");            
+            let letcheckedGleise = {};            
+            let existingBoxes = container.querySelectorAll("input[type='checkbox']");            
+            if (existingBoxes.length > 0) {                
+                existingBoxes.forEach(box => {                    
+                    letcheckedGleise[box.value] = box.checked;                });            }
+
+            container.innerHTML = "";
+
+            let selectAllLabel = document.createElement("label");            
+            selectAllLabel.innerHTML = `<b><input type="checkbox" id="selectAllGleise" checked onchange="toggleAllGleise(this)"> Alle an/abwählen</b>`;            
+            container.appendChild(selectAllLabel);            
+            container.appendChild(document.createElement("hr"));
+
+            alleGleise.forEach(gleis => {                
+                let isChecked = letcheckedGleise[gleis] !== undefined ? letcheckedGleise[gleis] : true;                
+                let label = document.createElement("label");                
+                label.innerHTML = `<input type="checkbox" value="${gleis}" ${isChecked ? "checked" : ""} onchange="render()"> Gleis ${gleis}`;                
+                container.appendChild(label);            });        }
+
+        function toggleAllGleise(master) {            
+            let container = document.getElementById("gleisCheckboxes");            
+            let checkboxes = container.querySelectorAll("input[type='checkbox']");            
+            checkboxes.forEach(cb => cb.checked = master.checked);            
+            render();        }
+
+        function render() {            
+            let app = document.getElementById("app");             
+            app.innerHTML = "";            
+            let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase().trim() : "";            
+            let gleisFilterInput = document.getElementById("gleisFilter") ? document.getElementById("gleisFilter").value.toLowerCase().trim() : "";            
             let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
-            let gewuenschteGleise = [];
-            if (gleisFilterInput !== "") {
-                gewuenschteGleise = gleisFilterInput.split(/[,;\s]+/).filter(Boolean);
-            }
+            let gewuenschteGleise = [];            
+            if (gleisFilterInput !== "") {                
+                gewuenschteGleise = gleisFilterInput.split(/[,;\s]+/).filter(Boolean);            }
 
-            let alleGleiseSet = new Set();
-            data.forEach(d => { 
-                if (d.gleis) alleGleiseSet.add(d.gleis); 
-            });
+            let alleGleiseSet = new Set();            
+            data.forEach(d => {                 
+                if (d.gleis) alleGleiseSet.add(d.gleis);             });
             let alleGleise = Array.from(alleGleiseSet).sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
 
-            let cbContainer = document.getElementById("gleisCheckboxes");
-            if (cbContainer && (cbContainer.children.length === 0 || !initializedGleise)) {
-                updateGleisCheckboxes(alleGleise);
-                initializedGleise = true;
-            }
+            let cbContainer = document.getElementById("gleisCheckboxes");            
+            if (cbContainer && (cbContainer.children.length === 0 || !initializedGleise)) {                
+                updateGleisCheckboxes(alleGleise);                
+                initializedGleise = true;            }
 
-            let activeGleise = [];
-            if (cbContainer) {
-                let checkboxes = cbContainer.querySelectorAll("input[type='checkbox']:not(#selectAllGleise)");
-                checkboxes.forEach(cb => {
-                    if (cb.checked) activeGleise.push(cb.value);
-                });
-            } else {
-                activeGleise = alleGleise;
-            }
+            let activeGleise = [];            
+            if (cbContainer) {                
+                let checkboxes = cbContainer.querySelectorAll("input[type='checkbox']:not(#selectAllGleise)");                
+                checkboxes.forEach(cb => {                    
+                    if (cb.checked) activeGleise.push(cb.value);                });            } else {                
+                activeGleise = alleGleise;            }
 
-            let g = {};
-            data.forEach((d, i) => {
-                g[d.tag] ??= {};
-                g[d.tag][d.gleis] ??= [];
-                g[d.tag][d.gleis].push({...d, index: i});
-            });
+            let g = {};            
+            data.forEach((d, i) => {                
+                g[d.tag] ??= {};                
+                g[d.tag][d.gleis] ??= [];                
+                g[d.tag][d.gleis].push({...d, index: i});            });
 
-            Object.keys(g).sort((a, b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {
+            Object.keys(g).sort((a, b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {                
                 if (selectedFilterTag !== "alle" && tag !== selectedFilterTag) return;
 
                 let gleiseFuerTag = alleGleise.filter(gleis => activeGleise.includes(gleis));
 
-                if (gewuenschteGleise.length > 0) {
-                    gleiseFuerTag = gleiseFuerTag.filter(gleis => 
-                        gewuenschteGleise.some(gF => String(gleis).toLowerCase().includes(gF))
-                    );
-                }
+                if (gewuenschteGleise.length > 0) {                    
+                    gleiseFuerTag = gleiseFuerTag.filter(gleis =>                         
+                        gewuenschteGleise.some(gF => String(gleis).toLowerCase().includes(gF))                    );                }
 
-                if (searchQuery !== "") {
-                    gleiseFuerTag = gleiseFuerTag.filter(gleis => {
-                        let eintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
-                        return eintraege.some(t => {
-                            let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);
-                            let matchesGleis = t.gleis && t.gleis.toLowerCase().includes(searchQuery);
-                            return matchesZug || matchesGleis;
-                        });
-                    });
-                }
+                if (searchQuery !== "") {                    
+                    gleiseFuerTag = gleiseFuerTag.filter(gleis => {                        
+                        let eintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];                        
+                        return eintraege.some(t => {                            
+                            let matchesZug = t.zug && t.zug.toLowerCase().includes(searchQuery);                            
+                            let matchesGleis = t.gleis && t.gleis.toLowerCase().includes(searchQuery);                            
+                            return matchesZug || matchesGleis;                        });                    });                }
 
                 if (gleiseFuerTag.length === 0) return;
 
-                let day = document.createElement("div");
-                day.className = "day";
+                let day = document.createElement("div");                
+                day.className = "day";                
                 day.innerHTML = `<div class='day-header'>${tag}</div>`;
 
-                let tracksContainer = document.createElement("div");
+                let tracksContainer = document.createElement("div");                
                 tracksContainer.className = "tracks-container";
 
-                gleiseFuerTag.forEach(gleis => {
-                    let track = document.createElement("div");
+                gleiseFuerTag.forEach(gleis => {                    
+                    let track = document.createElement("div");                    
                     track.className = "track";
 
-                    let bereichFuerGleis = getBereich(gleis);
-                    let gleisTitelText = gleis;
-                    if (bereichFuerGleis) {
-                        gleisTitelText += ` (${bereichFuerGleis.hinweis})`;
-                    }
+                    let bereichFuerGleis = getBereich(gleis);                    
+                    let gleisTitelText = gleis;                    
+                    if (bereichFuerGleis) {                        
+                        gleisTitelText += ` (${bereichFuerGleis.hinweis})`;                    }
                     track.innerHTML = `<div class='track-title'>${gleisTitelText}</div>`;
 
-                    let tl = document.createElement("div");
+                    let tl = document.createElement("div");                    
                     tl.className = "timeline";
 
-                    tl.ondragover = (e) => { 
-                        e.preventDefault(); 
-                        tl.classList.add("drag-over"); 
-                    };
-                    tl.ondragleave = () => { 
-                        tl.classList.remove("drag-over"); 
-                    };
-                    tl.ondrop = (e) => {
-                        e.preventDefault();
-                        tl.classList.remove("drag-over");
-                        let draggedIdx = e.dataTransfer.getData("text/plain");
-                        if (draggedIdx !== "") {
-                            let oldGleis = data[draggedIdx].gleis;
+                    tl.ondragover = (e) => {                         
+                        e.preventDefault();                         
+                        tl.classList.add("drag-over");                     };
+                    tl.ondragleave = () => {                         
+                        tl.classList.remove("drag-over");                     };
+                    tl.ondrop = (e) => {                        
+                        e.preventDefault();                        
+                        tl.classList.remove("drag-over");                        
+                        let draggedIdx = e.dataTransfer.getData("text/plain");                        
+                        if (draggedIdx !== "") {                            
+                            let oldGleis = data[draggedIdx].gleis;                            
                             let newGleis = gleis;
 
-                            let oldBereich = getBereich(oldGleis);
+                            let oldBereich = getBereich(oldGleis);                            
                             let newBereich = getBereich(newGleis);
 
-                            if (oldBereich !== newBereich) {
-                                data[draggedIdx].wegzeitWarning = true;
-                                showCustomAlert("Achtung Wegzeit kontrollieren!", "Warnung");
-                            }
+                            if (oldBereich !== newBereich) {                                
+                                data[draggedIdx].wegzeitWarning = true;                                
+                                showCustomAlert("Achtung Wegzeit kontrollieren!", "Warnung");                            }
 
-                            data[draggedIdx].tag = tag;
-                            data[draggedIdx].gleis = newGleis;
-                            selectedIndex = Number(draggedIdx);
-                            render();
-                        }
-                    };
+                            data[draggedIdx].tag = tag;                            
+                            data[draggedIdx].gleis = newGleis;                            
+                            selectedIndex = Number(draggedIdx);                            
+                            render();                        }                    };
 
-                    let layers = [];
+                    let layers = [];                    
                     let gleisEintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
 
-                    gleisEintraege.forEach(t => {
-                        let d = document.createElement("div");
-                        d.className = "train";
+                    // Einträge vor dem Layering chronologisch nach Startzeit sortieren, 
+                    // damit W:-Blöcke und Züge gleichermaßen fehlerfrei in Zeilen sortiert werden.
+                    gleisEintraege.sort((a, b) => tmin(a.von) - tmin(b.von));
+
+                    // Alle Einträge (egal ob Zug oder W:-Block) einheitlich durchlaufen und nach Layer-Logik einsortieren
+                    gleisEintraege.forEach(t => {                        
+                        let d = document.createElement("div");                        
+                        d.className = "train";                        
                         d.draggable = true;
 
-                        let s1 = tmin(t.von), e1 = tmin(t.bis);
-                        let assignedLayer = 0;
-                        
-                        // HINWEIS-PRÜFUNG: Wenn der Text mit "W:" beginnt, erzwingen wir Rot und weiße Schrift
-                        let isHinweis = t.zug && t.zug.trim().startsWith("W:");
-                        let zugFarbe = isHinweis ? "#e2001a" : (t.farbe || "#e2001a");
-                        d.style.color = "white"; // Immer weiße Schrift bei Hinweisen / Standard-Zügen
+                        let s1 = tmin(t.von), e1 = tmin(t.bis);                        
+                        let assignedLayer = 0;                                                
+                        let isHinweis = t.zug && t.zug.trim().startsWith("W:");                        
+                        let zugFarbe = isHinweis ? "#e2001a" : (t.farbe || "#e2001a");                        
+                        d.style.color = "white"; 
 
-                        // Wenn es ein Hinweis ist ("W:"), sortieren wir ihn logisch IMMER unter die normalen Züge im Layer-System
-                        if (isHinweis) {
-                            assignedLayer = 999; // Ganz nach unten schieben
-                        } else {
-                            for (let l = 0; l < layers.length; l++) {
-                                // Wir ignorieren Layer 999 bei der normalen Kollisionsprüfung für Züge
-                                if (l === 999) continue;
-                                if (!layers[l].some(ex => (s1 < ex.end && e1 > ex.start))) { 
-                                    assignedLayer = l; 
-                                    break; 
-                                }
-                                assignedLayer = l + 1;
+                        // Zuverlässige Layer-Kollisionsprüfung über einen stabilen while-Loop
+                        while (true) {
+                            layers[assignedLayer] ??= [];
+                            let collision = layers[assignedLayer].some(ex => (s1 < ex.end && e1 > ex.start));
+                            if (!collision) {
+                                layers[assignedLayer].push({ start: s1, end: e1 });
+                                break;
                             }
+                            assignedLayer++;
                         }
 
-                        layers[assignedLayer] ??= [];
-                        layers[assignedLayer].push({start: s1, end: e1});
+                        d.style.left = s1 / 1440 * 100 + "%";                        
+                        d.style.width = (e1 - s1) / 1440 * 100 + "%";                        
+                        d.style.top = (assignedLayer * 24) + "px"; 
 
-                        d.style.left = s1 / 1440 * 100 + "%";
-                        d.style.width = (e1 - s1) / 1440 * 100 + "%";
-                        d.style.top = (assignedLayer === 999 ? 24 : assignedLayer * 24) + "px"; // Direkt unter den ersten Block oder regulär platziert
-
-                        let gefundenerBereich = getBereich(t.gleis);
+                        let gefundenerBereich = getBereich(t.gleis);                        
                         let zusatzText = "";
 
-                        if (!isHinweis && gefundenerBereich) {
-                            zugFarbe = gefundenerBereich.farbe;
-                            zusatzText = ` (${gefundenerBereich.hinweis})`;
-                        }
+                        if (!isHinweis && gefundenerBereich) {                            
+                            zugFarbe = gefundenerBereich.farbe;                            
+                            zusatzText = ` (${gefundenerBereich.hinweis})`;                        }
 
-                        d.style.background = zugFarbe;
-                        d.innerText = t.zug;
+                        d.style.background = zugFarbe;                        
+                        d.innerText = t.zug;                        
                         d.title = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, Gleis ${t.gleis})${zusatzText}`;
 
-                        if (t.wegzeitWarning) {
-                            let dot = document.createElement("div");
-                            dot.className = "warning-dot";
-                            dot.title = "Achtung Wegzeit anpassen!";
-                            d.appendChild(dot);
-                        }
+                        if (t.wegzeitWarning) {                            
+                            let dot = document.createElement("div");                            
+                            dot.className = "warning-dot";                            
+                            dot.title = "Achtung Wegzeit anpassen!";                            
+                            d.appendChild(dot);                        }
 
-                        let matchesSearch = searchQuery !== "" && (
-                            (t.zug && t.zug.toLowerCase().includes(searchQuery)) || 
-                            (t.gleis && t.gleis.toLowerCase().includes(searchQuery))
-                        );
+                        let matchesSearch = searchQuery !== "" && (                            
+                            (t.zug && t.zug.toLowerCase().includes(searchQuery)) ||                             
+                            (t.gleis && t.gleis.toLowerCase().includes(searchQuery))                        );
 
-                        if (selectedIndex === t.index || matchesSearch) {
-                            d.classList.add("highlight");
-                        }
+                        if (selectedIndex === t.index || matchesSearch) {                            
+                            d.classList.add("highlight");                        }
 
-                        d.ondragstart = (e) => {
-                            e.dataTransfer.setData("text/plain", t.index);
-                        };
+                        d.ondragstart = (e) => {                            
+                            e.dataTransfer.setData("text/plain", t.index);                        };
 
-                        d.onclick = (e) => {
-                            e.stopPropagation();
+                        d.onclick = (e) => {                            
+                            e.stopPropagation();                            
                             selectedIndex = t.index;
 
-                            document.getElementById("tag").value = t.tag;
-                            document.getElementById("gleis").value = t.gleis;
-                            document.getElementById("zug").value = t.zug;
-                            document.getElementById("von").value = t.von;
-                            document.getElementById("bis").value = t.bis;
-                            document.getElementById("zugSearch").value = t.zug;
-                            searchKNOLO();
-                            render();
-                        };
+                            document.getElementById("tag").value = t.tag;                            
+                            document.getElementById("gleis").value = t.gleis;                            
+                            document.getElementById("zug").value = t.zug;                            
+                            document.getElementById("von").value = t.von;                            
+                            document.getElementById("bis").value = t.bis;                            
+                            document.getElementById("zugSearch").value = t.zug;                            
+                            searchKNOLO();                            
+                            render();                        };
 
-                        tl.appendChild(d);
-                    });
+                        tl.appendChild(d);                    });
 
-                    // Maximale Höhe der Timeline berechnen (Layer 999 separat behandeln, damit er nicht das Layout sprengt)
-                    let maxRegularLayer = Math.max(...layers.map((_, idx) => idx === 999 ? 0 : idx), 0);
-                    let hasHinweisLayer = layers[999] ? 1 : 0;
-                    let totalHeightLayers = Math.max(maxRegularLayer + 1 + hasHinweisLayer, 1);
-
-                    // Falls ein Hinweis da ist, sorgen wir dafür, dass der Hinweis-Layer auf Position (maxRegularLayer + 1) gezeichnet wird
-                    if (hasHinweisLayer && tl.querySelectorAll('.train')) {
-                        tl.querySelectorAll('.train').forEach(el => {
-                            if (el.innerText.trim().startsWith("W:")) {
-                                el.style.top = ((maxRegularLayer > 0 || layers[0]) ? (maxRegularLayer + (layers[0] ? 1 : 0)) * 24 : 24) + "px";
-                            }
-                        });
-                    }
-
-                    tl.style.height = (totalHeightLayers * 24 + 4) + "px";
-                    track.appendChild(tl);
+                    let totalHeightLayers = Math.max(layers.length, 1);
+                    tl.style.height = (totalHeightLayers * 24 + 4) + "px";                    
+                    track.appendChild(tl);                    
                     tracksContainer.appendChild(track);
                 });
 
@@ -902,119 +898,58 @@
             });
         }
 
-        function searchKNOLO() {
-            let val = document.getElementById("zugSearch").value.toLowerCase();
-            let head = document.getElementById("resultHead");
-            let body = document.getElementById("result");
-            body.innerHTML = "";
-            let gefiltert = knoloData.filter(x => Object.values(x).some(v => String(v).toLowerCase().includes(val)));
-            if (gefiltert.length > 0) {
-                head.innerHTML = `<tr>${Object.keys(gefiltert[0]).map(k => `<th>${k}</th>`).join("")}</tr>`;
-                gefiltert.forEach(r => {
-                    let tr = document.createElement("tr");
-                    tr.innerHTML = Object.values(r).map(v => `<td>${v}</td>`).join("");
-                    body.appendChild(tr);
-                });
-            }
-        }
-
-        function addEntry() {
-            let g = document.getElementById("gleis").value;
-            let z = document.getElementById("zug").value;
-            let v = document.getElementById("von").value;
-            let b = document.getElementById("bis").value;
-            if (!g || !z || !v || !b) return;
-            data.push({ 
-                tag: document.getElementById("tag").value, 
-                gleis: g, 
-                zug: z, 
-                von: v, 
-                bis: b, 
-                farbe: document.getElementById("farbe").value,
-                wegzeitWarning: false 
-            });
-            initializedGleise = false;
-            render();
-        }
-
-        function deleteSelected() { 
-            if (selectedIndex !== null) { 
-                data.splice(selectedIndex, 1); 
-                selectedIndex = null; 
-                initializedGleise = false;
-                render(); 
-            } 
-        }
-
-        function clearSelection() { 
-            selectedIndex = null; 
-            render(); 
-        }
-
-        function clearAll() { 
-            data = []; 
-            initializedGleise = false;
-            render(); 
-        }
-
-        function syncKNOLO() { 
-            document.getElementById("zugSearch").value = document.getElementById("zug").value; 
-            searchKNOLO(); 
-        }
-
-        function exportJSON() { 
-            let b = new Blob([JSON.stringify(data)]); 
-            let a = document.createElement("a"); 
-            a.href = URL.createObjectURL(b); 
-            a.download = "data.json"; 
-            a.click(); 
-        }
-
-        function importJSON(e) { 
-            let f = e.target.files[0]; 
-            if (!f) return; 
-            let r = new FileReader(); 
-            r.onload = x => { 
-                data = JSON.parse(x.target.result); 
-                initializedGleise = false;
-                render(); 
-            }; 
-            r.readAsText(f); 
-        }
-
         function showCustomAlert(message, title = "Hinweis") {
             let existingOverlay = document.getElementById("customModalOverlay");
             if (existingOverlay) existingOverlay.remove();
 
             let overlay = document.createElement("div");
-            overlay.id = "customModalOverlay";
             overlay.className = "custom-modal-overlay";
+            overlay.id = "customModalOverlay";
 
             let modal = document.createElement("div");
             modal.className = "custom-modal";
             modal.innerHTML = `
                 <h3>${title}</h3>
                 <p>${message}</p>
-                <button onclick="closeCustomAlert()">OK</button>
+                <button onclick="document.getElementById('customModalOverlay').remove()">Zurück</button>
             `;
 
-            overlay.edal?.appendChild(modal) || overlay.appendChild(modal);
+            overlay.appendChild(modal);
             document.body.appendChild(overlay);
-
-            window.addEventListener('keydown', handleModalKeypress);
         }
 
-        function closeCustomAlert() {
-            let overlay = document.getElementById("customModalOverlay");
-            if (overlay) {
-                overlay.remove();
-                window.removeEventListener('keydown', handleModalKeypress);
-            }
-        }
+        function searchKNOLO() {
+            let q = document.getElementById("zugSearch").value.toLowerCase().trim();
+            let tbody = document.getElementById("result");
+            let thead = document.getElementById("resultHead");
+            tbody.innerHTML = "";
+            thead.innerHTML = "";
 
-        function handleModalKeypress(e) {
-            if (e.key === "Enter" || e.key === "Escape") {
-                closeCustomAlert();
+            if (!q || knoloData.length === 0) return;
+
+            let matches = knoloData.filter(row => 
+                Object.values(row).some(val => String(val).toLowerCase().includes(q))
+            );
+
+            if (matches.length > 0) {
+                let keys = Object.keys(matches[0]);
+                let headTr = document.createElement("tr");
+                keys.forEach(k => {
+                    let th = document.createElement("th");
+                    th.innerText = k;
+                    headTr.appendChild(th);
+                });
+                thead.appendChild(headTr);
+
+                matches.forEach(m => {
+                    let tr = document.createElement("tr");
+                    keys.forEach(k => {
+                        let td = document.createElement("td");
+                        td.innerText = m[k] ?? "";
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
             }
         }
     </script>
