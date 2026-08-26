@@ -420,6 +420,7 @@
             <button onclick="clearAll()">🗑 Reset</button>
             <button onclick="deleteSelected()">❌ Löschen</button>
             <button onclick="clearSelection()">↩ Auswahl</button>
+            <button onclick="undoLastAction()" style="background: #3b82f6;">↶ Zurück</button>
             <button onclick="logout()">Logout</button>
             <div class="import-btn" onclick="importFile.click()" style="text-align:center; cursor:pointer; background:#1b2336; padding:8px; border:1px solid #2a3450; border-radius:6px; font-size:12px;">📂 Import</div>
             <input id="importFile" type="file" onchange="importJSON(event)" style="display:none;">
@@ -506,10 +507,16 @@
 
         let sbClient;
         let data = [];
+        let historyStack = []; // Speicher für Undo-Funktion
         let knoloData = [];
         let selectedIndex = null;
         let initializedGleise = false;
         const tageReihenfolge = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+
+        function saveStateToHistory() {
+            historyStack.push(JSON.parse(JSON.stringify(data)));
+            if (historyStack.length > 20) historyStack.shift(); // Maximal 20 Schritte speichern
+        }
 
         const gleisBereiche = [            
             { von: 137, bis: 146, farbe: "#0055ff", hinweis: "Wegzeit 11 Minuten" },
@@ -608,6 +615,7 @@
                 try {
                     let imported = JSON.parse(e.target.result);
                     if (Array.isArray(imported)) {
+                        saveStateToHistory();
                         data = imported;
                         initializedGleise = false;
                         render();
@@ -628,14 +636,18 @@
         }
 
         function clearAll() {
-            data = [];
-            selectedIndex = null;
-            initializedGleise = false;
-            render();
+            if (confirm("Möchten Sie wirklich alle Eingaben zurücksetzen (Reset)?")) {
+                saveStateToHistory();
+                data = [];
+                selectedIndex = null;
+                initializedGleise = false;
+                render();
+            }
         }
 
         function deleteSelected() {
             if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < data.length) {
+                saveStateToHistory();
                 data.splice(selectedIndex, 1);
                 selectedIndex = null;
                 initializedGleise = false;
@@ -650,6 +662,18 @@
             render();
         }
 
+        function undoLastAction() {
+            if (historyStack.length > 0) {
+                data = historyStack.pop();
+                selectedIndex = null;
+                initializedGleise = false;
+                render();
+                showCustomAlert("Letzte Änderung wurde rückgängig gemacht.", "Zurück");
+            } else {
+                showCustomAlert("Keine weiteren Schritte zum Zurücksetzen vorhanden.", "Hinweis");
+            }
+        }
+
         function addEntry() {
             let tag = document.getElementById("tag").value;
             let gleis = document.getElementById("gleis").value.trim();
@@ -662,6 +686,8 @@
                 showCustomAlert("Bitte alle Felder ausfüllen!", "Fehler");
                 return;
             }
+
+            saveStateToHistory();
 
             if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < data.length) {
                 data[selectedIndex] = { tag, gleis, zug, von, bis, farbe, wegzeitWarning: data[selectedIndex].wegzeitWarning };
@@ -802,6 +828,8 @@
                             let oldBereich = getBereich(oldGleis);                            
                             let newBereich = getBereich(newGleis);
 
+                            saveStateToHistory();
+
                             if (oldBereich !== newBereich) {                                
                                 data[draggedIdx].wegzeitWarning = true;                                
                                 showCustomAlert("Achtung Wegzeit kontrollieren!", "Warnung");                            }
@@ -814,11 +842,8 @@
                     let layers = [];                    
                     let gleisEintraege = (g[tag] && g[tag][gleis]) ? g[tag][gleis] : [];
 
-                    // Einträge vor dem Layering chronologisch nach Startzeit sortieren, 
-                    // damit W:-Blöcke und Züge gleichermaßen fehlerfrei in Zeilen sortiert werden.
                     gleisEintraege.sort((a, b) => tmin(a.von) - tmin(b.von));
 
-                    // Alle Einträge (egal ob Zug oder W:-Block) einheitlich durchlaufen und nach Layer-Logik einsortieren
                     gleisEintraege.forEach(t => {                        
                         let d = document.createElement("div");                        
                         d.className = "train";                        
@@ -830,7 +855,6 @@
                         let zugFarbe = isHinweis ? "#e2001a" : (t.farbe || "#e2001a");                        
                         d.style.color = "white"; 
 
-                        // Zuverlässige Layer-Kollisionsprüfung über einen stabilen while-Loop
                         while (true) {
                             layers[assignedLayer] ??= [];
                             let collision = layers[assignedLayer].some(ex => (s1 < ex.end && e1 > ex.start));
