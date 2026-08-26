@@ -788,7 +788,7 @@
             modal.innerHTML = `
                 <h3>Baustellen-Hinweis hinzufügen</h3>
                 <p>Geben Sie einen Hinweis für Zug <b>${item.zug}</b> ein:</p>
-                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="z.B. Bauarbeiten / Verspätung" autocomplete="off">
+                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="..." autocomplete="off">
                 <div style="display: flex; gap: 8px;">
                     <button onclick="saveBaustelleNote(${index})" style="background:#166534;">Speichern</button>
                     <button onclick="document.getElementById('customModalOverlay').remove()" style="background:#555;">Abbrechen</button>
@@ -1045,7 +1045,7 @@
                         let plusBtn = document.createElement("div");
                         plusBtn.className = "train-plus-btn";
                         plusBtn.innerText = "+";
-                        plusBtn.title = "Baustellen-Hinweis hinzufügen";
+                        plusBtn.title = "Hinweis hinzufügen";
                         plusBtn.onclick = (e) => openBaustelleModal(t.index, e);
                         d.appendChild(plusBtn);
 
