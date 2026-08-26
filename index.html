@@ -104,7 +104,7 @@
             cursor: pointer;
             font-size: 13px;
             user-select: none;
-            min-width: 120px;
+            min-width: 110px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -128,6 +128,7 @@
             overflow-y: auto;
             padding: 6px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            min-width: 140px;
         }
         .checkboxes label {
             display: flex;
@@ -137,6 +138,7 @@
             font-size: 12px;
             cursor: pointer;
             color: #ddd;
+            white-space: nowrap;
         }
         .checkboxes label:hover {
             background: rgba(255,255,255,0.05);
@@ -454,7 +456,6 @@
             .train { 
                 color: #ffffff !important; 
             }
-            /* Nur der kleine Plus-Button wird im Druck versteckt, der Hinweis-Balken bleibt sichtbar! */
             .train-plus-btn {
                 display: none !important;
             }
@@ -503,22 +504,16 @@
                 </div>
                 <div class="header-divider"></div>
                 <div class="header-group filter">
-                    <select id="filterTag" onchange="render()">
-                        <option value="alle">📅 WOCHE</option>
-                        <option>Montag</option>
-                        <option>Dienstag</option>
-                        <option>Mittwoch</option>
-                        <option>Donnerstag</option>
-                        <option>Freitag</option>
-                        <option>Samstag</option>
-                        <option>Sonntag</option>
-                    </select>
+                    <div class="multiselect" id="tagMultiSelect">
+                        <div class="select-box" onclick="toggleTagDropdown()">📅 Wochentage</div>
+                        <div class="checkboxes" id="tagCheckboxes"></div>
+                    </div>
                     <div class="multiselect" id="gleisMultiSelect">
-                        <div class="select-box" onclick="toggleDropdown()">🛤 Gleise</div>
+                        <div class="select-box" onclick="toggleGleisDropdown()">🛤 Gleise</div>
                         <div class="checkboxes" id="gleisCheckboxes"></div>
                     </div>
-                    <input id="gleisFilter" placeholder="🛤 Gleis-Filter (z.B. 210)" oninput="render()" style="width: 140px;">
-                    <input id="search" placeholder="🔎 Zug-Suche..." oninput="render()" style="width: 120px;">
+                    <input id="gleisFilter" placeholder="🛤 Gleis-Filter (z.B. 210)" oninput="render()" style="width: 130px;">
+                    <input id="search" placeholder="🔎 Zug-Suche..." oninput="render()" style="width: 110px;">
                     <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
                 </div>
                 <span class="copyright">GBA Version 3.0 (Update 29/07/2026) © Bernhard Kornberger 2026</span>
@@ -566,6 +561,7 @@
         let knoloData = [];
         let selectedIndex = null;
         let initializedGleise = false;
+        let initializedTage = false;
         const tageReihenfolge = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
 
         function saveStateToHistory() {
@@ -634,14 +630,25 @@
             bottom.classList.toggle("collapsed");            
             icon.innerText = bottom.classList.contains("collapsed") ? "▲" : "▼";        }
 
-        function toggleDropdown() {            
+        function toggleTagDropdown() {            
+            let cb = document.getElementById("tagCheckboxes");            
+            let gleisCb = document.getElementById("gleisCheckboxes");
+            if (gleisCb) gleisCb.style.display = "none";
+            cb.style.display = cb.style.display === "block" ? "none" : "block";        }
+
+        function toggleGleisDropdown() {            
             let cb = document.getElementById("gleisCheckboxes");            
+            let tagCb = document.getElementById("tagCheckboxes");
+            if (tagCb) tagCb.style.display = "none";
             cb.style.display = cb.style.display === "block" ? "none" : "block";        }
 
         window.onclick = function(event) {            
-            if (!event.target.closest('#gleisMultiSelect')) {                
-                let cb = document.getElementById("gleisCheckboxes");                
-                if (cb) cb.style.display = "none";            }
+            if (!event.target.closest('#gleisMultiSelect') && !event.target.closest('#tagMultiSelect')) {                
+                let cbGleis = document.getElementById("gleisCheckboxes");                
+                let cbTag = document.getElementById("tagCheckboxes");                
+                if (cbGleis) cbGleis.style.display = "none";            
+                if (cbTag) cbTag.style.display = "none";            
+            }
         }
 
         function exportPDF() {             
@@ -673,6 +680,7 @@
                         saveStateToHistory();
                         data = imported;
                         initializedGleise = false;
+                        initializedTage = false;
                         render();
                         showCustomAlert("Daten erfolgreich importiert!", "Erfolg");
                     } else {
@@ -696,6 +704,7 @@
                 data = [];
                 selectedIndex = null;
                 initializedGleise = false;
+                initializedTage = false;
                 render();
             }
         }
@@ -706,6 +715,7 @@
                 data.splice(selectedIndex, 1);
                 selectedIndex = null;
                 initializedGleise = false;
+                initializedTage = false;
                 render();
             } else {
                 showCustomAlert("Kein Eintrag ausgewählt.", "Hinweis");
@@ -722,6 +732,7 @@
                 data = historyStack.pop();
                 selectedIndex = null;
                 initializedGleise = false;
+                initializedTage = false;
                 render();
                 showCustomAlert("Letzte Änderung wurde rückgängig gemacht.", "Zurück");
             } else {
@@ -756,6 +767,7 @@
 
             selectedIndex = null;
             initializedGleise = false;
+            initializedTage = false;
             render();
         }
 
@@ -776,7 +788,7 @@
             modal.innerHTML = `
                 <h3>Baustellen-Hinweis hinzufügen</h3>
                 <p>Geben Sie einen Hinweis für Zug <b>${item.zug}</b> ein:</p>
-                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="..." autocomplete="off">
+                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="z.B. Bauarbeiten / Verspätung" autocomplete="off">
                 <div style="display: flex; gap: 8px;">
                     <button onclick="saveBaustelleNote(${index})" style="background:#166534;">Speichern</button>
                     <button onclick="document.getElementById('customModalOverlay').remove()" style="background:#555;">Abbrechen</button>
@@ -812,13 +824,40 @@
             let gleisNum = parseInt(gleisStr, 10);            
             return gleisBereiche.find(b => !isNaN(gleisNum) && gleisNum >= b.von && gleisNum <= b.bis);        }
 
-        function updateGleisCheckboxes(alleGleise) {            
-            let container = document.getElementById("gleisCheckboxes");            
-            let letcheckedGleise = {};            
+        function updateTagCheckboxes() {            
+            let container = document.getElementById("tagCheckboxes");            
+            let checkedTage = {};            
             let existingBoxes = container.querySelectorAll("input[type='checkbox']");            
             if (existingBoxes.length > 0) {                
                 existingBoxes.forEach(box => {                    
-                    letcheckedGleise[box.value] = box.checked;                });            }
+                    checkedTage[box.value] = box.checked;                });            }
+
+            container.innerHTML = "";
+
+            let selectAllLabel = document.createElement("label");            
+            selectAllLabel.innerHTML = `<b><input type="checkbox" id="selectAllTage" checked onchange="toggleAllTage(this)"> Alle an/abwählen</b>`;            
+            container.appendChild(selectAllLabel);            
+            container.appendChild(document.createElement("hr"));
+
+            tageReihenfolge.forEach(tag => {                
+                let isChecked = checkedTage[tag] !== undefined ? checkedTage[tag] : true;                
+                let label = document.createElement("label");                
+                label.innerHTML = `<input type="checkbox" value="${tag}" ${isChecked ? "checked" : ""} onchange="render()"> ${tag}`;                
+                container.appendChild(label);            });        }
+
+        function toggleAllTage(master) {            
+            let container = document.getElementById("tagCheckboxes");            
+            let checkboxes = container.querySelectorAll("input[type='checkbox']");            
+            checkboxes.forEach(cb => cb.checked = master.checked);            
+            render();        }
+
+        function updateGleisCheckboxes(alleGleise) {            
+            let container = document.getElementById("gleisCheckboxes");            
+            let checkedGleise = {};            
+            let existingBoxes = container.querySelectorAll("input[type='checkbox']");            
+            if (existingBoxes.length > 0) {                
+                existingBoxes.forEach(box => {                    
+                    checkedGleise[box.value] = box.checked;                });            }
 
             container.innerHTML = "";
 
@@ -828,7 +867,7 @@
             container.appendChild(document.createElement("hr"));
 
             alleGleise.forEach(gleis => {                
-                let isChecked = letcheckedGleise[gleis] !== undefined ? letcheckedGleise[gleis] : true;                
+                let isChecked = checkedGleise[gleis] !== undefined ? checkedGleise[gleis] : true;                
                 let label = document.createElement("label");                
                 label.innerHTML = `<input type="checkbox" value="${gleis}" ${isChecked ? "checked" : ""} onchange="render()"> Gleis ${gleis}`;                
                 container.appendChild(label);            });        }
@@ -844,7 +883,6 @@
             app.innerHTML = "";            
             let searchQuery = document.getElementById("search") ? document.getElementById("search").value.toLowerCase().trim() : "";            
             let gleisFilterInput = document.getElementById("gleisFilter") ? document.getElementById("gleisFilter").value.toLowerCase().trim() : "";            
-            let selectedFilterTag = document.getElementById("filterTag") ? document.getElementById("filterTag").value : "alle";
 
             let gewuenschteGleise = [];            
             if (gleisFilterInput !== "") {                
@@ -855,10 +893,25 @@
                 if (d.gleis) alleGleiseSet.add(d.gleis);             });
             let alleGleise = Array.from(alleGleiseSet).sort((a, b) => String(a).localeCompare(String(b), undefined, {numeric: true}));
 
+            let tagCbContainer = document.getElementById("tagCheckboxes");            
+            if (tagCbContainer && (tagCbContainer.children.length === 0 || !initializedTage)) {                
+                updateTagCheckboxes();                
+                initializedTage = true;            }
+
             let cbContainer = document.getElementById("gleisCheckboxes");            
             if (cbContainer && (cbContainer.children.length === 0 || !initializedGleise)) {                
                 updateGleisCheckboxes(alleGleise);                
                 initializedGleise = true;            }
+
+            let activeTage = [];
+            if (tagCbContainer) {
+                let checkboxes = tagCbContainer.querySelectorAll("input[type='checkbox']:not(#selectAllTage)");
+                checkboxes.forEach(cb => {
+                    if (cb.checked) activeTage.push(cb.value);
+                });
+            } else {
+                activeTage = tageReihenfolge;
+            }
 
             let activeGleise = [];            
             if (cbContainer) {                
@@ -874,7 +927,7 @@
                 g[d.tag][d.gleis].push({...d, index: i});            });
 
             Object.keys(g).sort((a, b) => tageReihenfolge.indexOf(a) - tageReihenfolge.indexOf(b)).forEach(tag => {                
-                if (selectedFilterTag !== "alle" && tag !== selectedFilterTag) return;
+                if (!activeTage.includes(tag)) return;
 
                 let gleiseFuerTag = alleGleise.filter(gleis => activeGleise.includes(gleis));
 
@@ -992,7 +1045,7 @@
                         let plusBtn = document.createElement("div");
                         plusBtn.className = "train-plus-btn";
                         plusBtn.innerText = "+";
-                        plusBtn.title = "Hinweis hinzufügen";
+                        plusBtn.title = "Baustellen-Hinweis hinzufügen";
                         plusBtn.onclick = (e) => openBaustelleModal(t.index, e);
                         d.appendChild(plusBtn);
 
