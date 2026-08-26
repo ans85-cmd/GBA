@@ -83,12 +83,13 @@
             background: #2a3450;
             margin: 0 4px;
         }
-        input, select { 
+        input, select, textarea { 
             background: var(--panel2); 
             border: 1px solid #2a3450; 
             color: white; 
             padding: 6px; 
             border-radius: 4px; 
+            font-family: inherit;
         }
         .multiselect {
             position: relative;
@@ -205,6 +206,9 @@
             border-radius: 3px; 
             user-select: none; 
             overflow: visible; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .train:active { 
             cursor: grabbing; 
@@ -219,6 +223,45 @@
             border-radius: 50%;
             border: 1px solid white;
             box-shadow: 0 0 4px #ff0000;
+        }
+        /* Baustellen-Hinweis-Button am Balken */
+        .train-plus-btn {
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 14px;
+            height: 14px;
+            background: #ffd600;
+            color: #000;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #000;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        .train-plus-btn:hover {
+            transform: scale(1.2);
+        }
+        /* Baustellen-Badge im Balken */
+        .baustellen-badge {
+            background: #ffd600;
+            color: #000;
+            font-size: 9px;
+            padding: 0 4px;
+            border-radius: 3px;
+            margin-left: 4px;
+            border: 1px dashed #000;
+            font-weight: bold;
+            display: inline-block;
+            max-width: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
         }
         .highlight { 
             outline: 2px solid var(--highlight); 
@@ -325,10 +368,15 @@
             font-size: 16px;
         }
         .custom-modal p {
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
             color: #ddd;
             font-size: 13px;
             line-height: 1.4;
+        }
+        .custom-modal input, .custom-modal textarea {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
         }
         .custom-modal button {
             background: var(--accent);
@@ -404,6 +452,9 @@
             }
             .train { 
                 color: #ffffff !important; 
+            }
+            .train-plus-btn {
+                display: none !important;
             }
         }
     </style>
@@ -507,7 +558,7 @@
 
         let sbClient;
         let data = [];
-        let historyStack = []; // Speicher für Undo-Funktion
+        let historyStack = []; 
         let knoloData = [];
         let selectedIndex = null;
         let initializedGleise = false;
@@ -515,7 +566,7 @@
 
         function saveStateToHistory() {
             historyStack.push(JSON.parse(JSON.stringify(data)));
-            if (historyStack.length > 20) historyStack.shift(); // Maximal 20 Schritte speichern
+            if (historyStack.length > 20) historyStack.shift(); 
         }
 
         const gleisBereiche = [            
@@ -690,13 +741,61 @@
             saveStateToHistory();
 
             if (selectedIndex !== null && selectedIndex >= 0 && selectedIndex < data.length) {
-                data[selectedIndex] = { tag, gleis, zug, von, bis, farbe, wegzeitWarning: data[selectedIndex].wegzeitWarning };
+                data[selectedIndex] = { 
+                    tag, gleis, zug, von, bis, farbe, 
+                    wegzeitWarning: data[selectedIndex].wegzeitWarning,
+                    baustelleNote: data[selectedIndex].baustelleNote || "" 
+                };
             } else {
-                data.push({ tag, gleis, zug, von, bis, farbe });
+                data.push({ tag, gleis, zug, von, bis, farbe, baustelleNote: "" });
             }
 
             selectedIndex = null;
             initializedGleise = false;
+            render();
+        }
+
+        // Funktion zum Öffnen des Baustellen-Hinweis-Dialogs
+        function openBaustelleModal(index, e) {
+            e.stopPropagation();
+            let item = data[index];
+            if (!item) return;
+
+            let existingOverlay = document.getElementById("customModalOverlay");
+            if (existingOverlay) existingOverlay.remove();
+
+            let overlay = document.createElement("div");
+            overlay.className = "custom-modal-overlay";
+            overlay.id = "customModalOverlay";
+
+            let modal = document.createElement("div");
+            modal.className = "custom-modal";
+            modal.innerHTML = `
+                <h3>Baustellen-Hinweis hinzufügen</h3>
+                <p>Geben Sie einen Hinweis für Zug <b>${item.zug}</b> ein:</p>
+                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="z.B. Bauarbeiten / Verspätung" autocomplete="off">
+                <div style="display: flex; gap: 8px;">
+                    <button onclick="saveBaustelleNote(${index})" style="background:#166534;">Speichern</button>
+                    <button onclick="document.getElementById('customModalOverlay').remove()" style="background:#555;">Abbrechen</button>
+                </div>
+            `;
+
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+            
+            let inputField = document.getElementById("modalBaustelleInput");
+            if (inputField) {
+                inputField.focus();
+                inputField.select();
+            }
+        }
+
+        function saveBaustelleNote(index) {
+            let inputVal = document.getElementById("modalBaustelleInput").value.trim();
+            saveStateToHistory();
+            data[index].baustelleNote = inputVal;
+            let overlay = document.getElementById("customModalOverlay");
+            if (overlay) overlay.remove();
             render();
         }
 
@@ -877,14 +976,31 @@
                             zusatzText = ` (${gefundenerBereich.hinweis})`;                        }
 
                         d.style.background = zugFarbe;                        
-                        d.innerText = t.zug;                        
-                        d.title = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, Gleis ${t.gleis})${zusatzText}`;
+                        
+                        // Textinhalt zusammenbauen (Zugname + optionaler Baustellen-Hinweis im gelben Badge-Design)
+                        let innerHTMLContent = `<span>${t.zug}</span>`;
+                        if (t.baustelleNote && t.baustelleNote.trim() !== "") {
+                            innerHTMLContent += `<span class="baustelle-badge" title="${t.baustelleNote}">${t.baustelleNote}</span>`;
+                        }
+                        d.innerHTML = innerHTMLContent;
+
+                        let fullTitleText = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, Gleis ${t.gleis})${zusatzText}`;
+                        if (t.baustelleNote) fullTitleText += ` | Baustelle: ${t.baustelleNote}`;
+                        d.title = fullTitleText;
 
                         if (t.wegzeitWarning) {                            
                             let dot = document.createElement("div");                            
                             dot.className = "warning-dot";                            
                             dot.title = "Achtung Wegzeit anpassen!";                            
                             d.appendChild(dot);                        }
+
+                        // Kleiner Plus-Kreis am rechten Rand des Balkens
+                        let plusBtn = document.createElement("div");
+                        plusBtn.className = "train-plus-btn";
+                        plusBtn.innerText = "+";
+                        plusBtn.title = "Baustellen-Hinweis hinzufügen";
+                        plusBtn.onclick = (e) => openBaustelleModal(t.index, e);
+                        d.appendChild(plusBtn);
 
                         let matchesSearch = searchQuery !== "" && (                            
                             (t.zug && t.zug.toLowerCase().includes(searchQuery)) ||                             
