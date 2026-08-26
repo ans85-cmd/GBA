@@ -224,7 +224,6 @@
             border: 1px solid white;
             box-shadow: 0 0 4px #ff0000;
         }
-        /* Kleiner Plus-Button am rechten Rand des Hauptbalkens */
         .train-plus-btn {
             position: absolute;
             right: -8px;
@@ -246,7 +245,6 @@
         .train-plus-btn:hover {
             transform: scale(1.2);
         }
-        /* Baustellen-Unterbalken direkt unter dem Hauptbalken */
         .baustellen-sub-bar {
             position: absolute;
             height: 14px;
@@ -456,8 +454,13 @@
             .train { 
                 color: #ffffff !important; 
             }
-            .train-plus-btn, .baustellen-sub-bar {
+            /* Nur der kleine Plus-Button wird im Druck versteckt, der Hinweis-Balken bleibt sichtbar! */
+            .train-plus-btn {
                 display: none !important;
+            }
+            .baustellen-sub-bar {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
         }
     </style>
@@ -773,7 +776,7 @@
             modal.innerHTML = `
                 <h3>Baustellen-Hinweis hinzufügen</h3>
                 <p>Geben Sie einen Hinweis für Zug <b>${item.zug}</b> ein:</p>
-                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="z.B. Bauarbeiten / Verspätung" autocomplete="off">
+                <input type="text" id="modalBaustelleInput" value="${item.baustelleNote || ''}" placeholder="..." autocomplete="off">
                 <div style="display: flex; gap: 8px;">
                     <button onclick="saveBaustelleNote(${index})" style="background:#166534;">Speichern</button>
                     <button onclick="document.getElementById('customModalOverlay').remove()" style="background:#555;">Abbrechen</button>
@@ -964,7 +967,7 @@
 
                         d.style.left = s1 / 1440 * 100 + "%";                        
                         d.style.width = (e1 - s1) / 1440 * 100 + "%";                        
-                        d.style.top = (assignedLayer * 38) + "px";
+                        d.style.top = (assignedLayer * 38) + "px"; 
 
                         let gefundenerBereich = getBereich(t.gleis);                        
                         let zusatzText = "";
@@ -998,7 +1001,7 @@
                             subBar.className = "baustellen-sub-bar";
                             subBar.style.left = "0%";
                             subBar.style.width = "100%";
-                            subBar.style.top = "24px";
+                            subBar.style.top = "24px"; 
                             subBar.innerText = t.baustelleNote;
                             subBar.title = "Baustelle: " + t.baustelleNote;
                             subBar.onclick = (e) => openBaustelleModal(t.index, e);
@@ -1068,7 +1071,7 @@
             tbody.innerHTML = "";
             thead.innerHTML = "";
 
-            if (!q || knoloData.index === 0 && knoloData.length === 0) return;
+            if (!q || knoloData.length === 0) return;
 
             let matches = knoloData.filter(row => 
                 Object.values(row).some(val => String(val).toLowerCase().includes(q))
