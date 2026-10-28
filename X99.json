@@ -4865,6 +4865,15 @@
     "baustelleNote": "",
     "wegzeitWarning": true
   },
+   {
+    "tag": "Montag",
+    "gleis": "429",
+    "zug": "LEER",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
   {
     "tag": "Dienstag",
     "gleis": "429",
