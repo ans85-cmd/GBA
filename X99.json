@@ -280,7 +280,8 @@
     "zug": "369/366",
     "von": "00:03",
     "bis": "05:56",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Sonntag",
@@ -385,7 +386,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Montag",
@@ -405,7 +407,7 @@
     "bis": "06:01",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Montag",
@@ -423,7 +425,7 @@
     "bis": "05:56",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Samstag",
@@ -944,7 +946,7 @@
     "bis": "23:59",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "658 BB-T"
   },
   {
     "tag": "Dienstag",
@@ -1018,7 +1020,7 @@
     "bis": "05:01",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Samstag",
@@ -1379,7 +1381,7 @@
     "bis": "05:43",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "768 BB-T"
   },
   {
     "tag": "Mittwoch",
@@ -1395,7 +1397,8 @@
     "zug": "768/1290",
     "von": "00:01",
     "bis": "05:43",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "768 BB-T"
   },
   {
     "tag": "Samstag",
@@ -1457,20 +1460,14 @@
     "baustelleNote": "AU,Wasser"
   },
   {
-    "tag": "Mittwoch",
-    "gleis": "264",
-    "zug": "369/366",
-    "von": "00:03",
-    "bis": "05:56",
-    "wegzeitWarning": true
-  },
-  {
     "tag": "Donnerstag",
     "gleis": "264",
     "zug": "369/366",
     "von": "00:03",
     "bis": "05:56",
-    "wegzeitWarning": true
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Freitag",
@@ -1478,7 +1475,8 @@
     "zug": "369/366",
     "von": "00:03",
     "bis": "05:56",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Freitag",
@@ -1504,7 +1502,7 @@
     "bis": "05:56",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Freitag",
@@ -1576,7 +1574,7 @@
     "von": "00:01",
     "bis": "06:01",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Mittwoch",
@@ -1636,7 +1634,7 @@
     "bis": "06:01",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Donnerstag",
@@ -1646,7 +1644,7 @@
     "bis": "06:01",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Dienstag",
@@ -1799,7 +1797,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Mittwoch",
@@ -1815,7 +1814,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Donnerstag",
@@ -1831,7 +1831,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Freitag",
@@ -1847,7 +1848,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Samstag",
@@ -1863,7 +1865,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Sonntag",
@@ -1879,7 +1882,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Montag",
@@ -1956,7 +1960,7 @@
     "bis": "05:51",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "768 BB-T"
   },
   {
     "tag": "Samstag",
@@ -1964,7 +1968,8 @@
     "zug": "768/668",
     "von": "00:59",
     "bis": "06:56",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "768 BB-T"
   },
   {
     "tag": "Montag",
@@ -1983,7 +1988,7 @@
     "bis": "15:07",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Dienstag",
@@ -2105,7 +2110,7 @@
     "von": "00:00",
     "bis": "07:11",
     "farbe": "#e2001a",
-    "baustelleNote": "",
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)",
     "wegzeitWarning": true
   },
   {
@@ -2122,7 +2127,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Mittwoch",
@@ -2138,7 +2144,8 @@
     "zug": "898/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Mittwoch",
@@ -2154,7 +2161,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Donnerstag",
@@ -2170,7 +2178,8 @@
     "zug": "898/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Donnerstag",
@@ -2186,7 +2195,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Freitag",
@@ -2202,7 +2212,8 @@
     "zug": "898/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Freitag",
@@ -2218,7 +2229,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -2234,7 +2246,8 @@
     "zug": "898/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -2250,7 +2263,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Sonntag",
@@ -2268,7 +2282,7 @@
     "bis": "07:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Sonntag",
@@ -2284,7 +2298,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -2292,7 +2307,8 @@
     "zug": "369/1298",
     "von": "00:03",
     "bis": "07:16",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "369 BB-T"
   },
   {
     "tag": "Montag",
@@ -2352,7 +2368,7 @@
     "bis": "08:07",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Freitag",
@@ -2360,7 +2376,8 @@
     "zug": "658/551",
     "von": "21:53",
     "bis": "23:59",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "658 BB-T"
   },
   {
     "tag": "Samstag",
@@ -2388,7 +2405,7 @@
     "bis": "08:07",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "664 BB-T"
   },
   {
     "tag": "Montag",
@@ -2414,7 +2431,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Mittwoch",
@@ -2430,7 +2448,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Donnerstag",
@@ -2446,7 +2465,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Freitag",
@@ -2462,7 +2482,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Samstag",
@@ -2478,7 +2499,8 @@
     "zug": "746/547",
     "von": "00:00",
     "bis": "08:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Sonntag",
@@ -2498,7 +2520,7 @@
     "bis": "08:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "547 1A-CHECK (08.02.-09.07.)"
   },
   {
     "tag": "Montag",
@@ -2659,7 +2681,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Mittwoch",
@@ -2679,7 +2701,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Donnerstag",
@@ -2699,7 +2721,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Freitag",
@@ -2719,7 +2741,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Samstag",
@@ -2739,7 +2761,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Sonntag",
@@ -2759,7 +2781,7 @@
     "bis": "09:11",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "549 1A-CHECK"
   },
   {
     "tag": "Dienstag",
@@ -3052,7 +3074,7 @@
     "von": "12:53",
     "bis": "20:11",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Dienstag",
@@ -3216,7 +3238,7 @@
     "bis": "15:07",
     "farbe": "#e2001a",
     "wegzeitWarning": true,
-    "baustelleNote": ""
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Mittwoch",
@@ -3224,15 +3246,17 @@
     "zug": "848/797",
     "von": "07:49",
     "bis": "15:07",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Donnerstag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "848/797",
     "von": "07:49",
     "bis": "15:07",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Freitag",
@@ -3240,7 +3264,8 @@
     "zug": "848/797",
     "von": "07:49",
     "bis": "15:07",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -3248,7 +3273,8 @@
     "zug": "848/797",
     "von": "07:49",
     "bis": "15:07",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Sonntag",
@@ -3256,7 +3282,8 @@
     "zug": "848/797",
     "von": "07:49",
     "bis": "15:07",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "848 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Montag",
@@ -3272,7 +3299,8 @@
     "zug": "646/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Montag",
@@ -3280,7 +3308,8 @@
     "zug": "646/816",
     "von": "16:49",
     "bis": "21:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "1A"
   },
   {
     "tag": "Dienstag",
@@ -3939,7 +3968,8 @@
     "zug": "898/545",
     "von": "00:00",
     "bis": "07:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "545 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -4021,7 +4051,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Mittwoch",
@@ -4029,7 +4060,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Donnerstag",
@@ -4037,7 +4069,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Freitag",
@@ -4045,7 +4078,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Samstag",
@@ -4053,7 +4087,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Sonntag",
@@ -4061,7 +4096,8 @@
     "zug": "796/841",
     "von": "12:53",
     "bis": "20:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "796 1A-CHECK (bis 07.02.)"
   },
   {
     "tag": "Montag",
@@ -4088,7 +4124,8 @@
     "zug": "658/551",
     "von": "21:53",
     "bis": "23:59",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "658 BB-T"
   },
   {
     "tag": "Dienstag",
@@ -4269,7 +4306,8 @@
     "zug": "748/543",
     "von": "00:00",
     "bis": "06:11",
-    "wegzeitWarning": true
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
   },
   {
     "tag": "Montag",
@@ -4865,7 +4903,7 @@
     "baustelleNote": "",
     "wegzeitWarning": true
   },
-   {
+  {
     "tag": "Montag",
     "gleis": "429",
     "zug": "LEER",
@@ -4936,5 +4974,23 @@
     "bis": "06:11",
     "farbe": "#e2001a",
     "baustelleNote": ""
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "264",
+    "zug": "369/366",
+    "von": "00:03",
+    "bis": "05:56",
+    "farbe": "#e2001a",
+    "baustelleNote": "369 BB-T"
+  },
+  {
+    "tag": "Dienstag",
+    "gleis": "258",
+    "zug": "742/549",
+    "von": "00:00",
+    "bis": "09:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "549 1A-CHECK"
   }
 ]
