@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>GBA 3.0</title>
+    <title>GBA 4.0</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e2001a'><path d='M12 2C8 2 4 2.5 4 6v12c0 3.5 3.5 4 8 4s8-.5 8-4V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19 11H5V7h14v4z'/></svg>">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body { 
@@ -76,6 +77,19 @@
         }
         .header-group.filter {
             border-color: #27314a;
+        }
+        /* Neues Informationsfeld Styling */
+        .header-group.info-banner {
+            background: rgba(27, 35, 54, 0.9);
+            border-color: var(--highlight);
+            color: var(--highlight);
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 8px rgba(255, 214, 0, 0.2);
         }
         .header-divider {
             width: 1px;
@@ -502,6 +516,10 @@
                     <input id="farbe" type="color" value="#e2001a" style="width: 36px; padding: 2px; cursor: pointer;">
                     <button onclick="addEntry()">Belegung Speichern</button>
                 </div>
+                <!-- Informationsfeld -->
+                <div class="header-group info-banner">
+                    <span>Abstellplanung ab 13.12.2026</span>
+                </div>
                 <div class="header-divider"></div>
                 <div class="header-group filter">
                     <div class="multiselect" id="tagMultiSelect">
@@ -516,7 +534,7 @@
                     <input id="search" placeholder="🔎 Zug-Suche..." oninput="render()" style="width: 110px;">
                     <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
                 </div>
-                <span class="copyright">GBA Version 3.0 (Update 29/07/2026) © Bernhard Kornberger 2026</span>
+                <span class="copyright">GBA Version 4.0 (Update 28/10/2026) © Bernhard Kornberger 2026</span>
             </div>
             <div id="app" class="container"></div>
             <div class="bottom" id="bottomPanel">
