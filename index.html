@@ -212,15 +212,15 @@
         }
         .train { 
             position: absolute; 
-            height: 22px; 
+            height: 20px; 
             font-size: 10px; 
-            line-height: 22px; 
+            line-height: 20px; 
             text-align: center; 
             cursor: grab; 
             font-weight: bold; 
             border-radius: 3px; 
             user-select: none; 
-            overflow: visible; /* WICHTIG: Erlaubt sichtbare Sub-Bars unter dem Balken */
+            overflow: visible; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -228,48 +228,46 @@
         .train:active { 
             cursor: grabbing; 
         }
-        .warning-dot {
+
+        /* Haupt-Beschriftung als Textfeld OBERHALB des Bildes */
+        .train-top-bar {
             position: absolute;
-            top: -4px;
-            right: -4px;
-            width: 8px;
-            height: 8px;
-            background-color: #ff0000;
-            border-radius: 50%;
-            border: 1px solid white;
-            box-shadow: 0 0 4px #ff0000;
-        }
-        .train-plus-btn {
-            position: absolute;
-            right: -8px;
-            top: -6px;
-            width: 14px;
-            height: 14px;
-            background: #ffd600;
-            color: #000;
+            height: 15px;
+            top: -16px;
+            left: 0;
+            width: 100%;
+            background: rgba(27, 35, 54, 0.95);
+            color: #ffffff;
             font-size: 10px;
-            line-height: 14px;
+            line-height: 15px;
             text-align: center;
-            border-radius: 50%;
-            border: 1px solid #000;
-            cursor: pointer;
             font-weight: bold;
-            z-index: 5;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            border-radius: 3px 3px 0 0;
+            border: 1px solid #3b4b72;
+            border-bottom: none;
+            z-index: 4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 4px;
+            box-sizing: border-box;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
         }
-        .train-plus-btn:hover {
-            transform: scale(1.2);
-        }
+
+        /* Untere Baustellen-Sub-Bar */
         .baustellen-sub-bar {
             position: absolute;
             height: 14px;
+            top: 21px;
+            left: 0;
+            width: 100%;
             background: #ffd600;
             color: #000;
             font-size: 9px;
             line-height: 14px;
             text-align: center;
             font-weight: bold;
-            border-radius: 2px;
+            border-radius: 0 0 3px 3px;
             border: 1px dashed #000;
             z-index: 4;
             overflow: hidden;
@@ -285,8 +283,40 @@
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            color: #ffffff !important;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9) !important;
+        }
+
+        .warning-dot {
+            position: absolute;
+            top: -18px;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            border: 1px solid white;
+            box-shadow: 0 0 4px #ff0000;
+            z-index: 6;
+        }
+        .train-plus-btn {
+            position: absolute;
+            right: -8px;
+            top: -18px;
+            width: 14px;
+            height: 14px;
+            background: #ffd600;
+            color: #000;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #000;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 6;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        .train-plus-btn:hover {
+            transform: scale(1.2);
         }
 
         .highlight { 
@@ -1046,7 +1076,8 @@
 
                         d.style.left = s1 / 1440 * 100 + "%";                        
                         d.style.width = (e1 - s1) / 1440 * 100 + "%";                        
-                        d.style.top = (assignedLayer * 38) + "px"; 
+                        // Erhöhter Abstand der Layer für 3-zeiligen Aufbau (Top-Bar, Bild-Balken, Sub-Bar)
+                        d.style.top = (assignedLayer * 54 + 18) + "px"; 
 
                         let gefundenerBereich = getBereich(t.gleis);                        
                         let zusatzText = "";
@@ -1056,9 +1087,14 @@
                             zusatzText = ` (${gefundenerBereich.hinweis})`;                        }
 
                         d.style.background = zugFarbe;                        
-                        d.innerText = t.zug;
 
-                        // Automatische Bildzuweisung als Hintergrund
+                        // Obere Sub-Bar für die glasklare Hauptbeschriftung
+                        let topBar = document.createElement("div");
+                        topBar.className = "train-top-bar";
+                        topBar.innerText = t.zug;
+                        d.appendChild(topBar);
+
+                        // Bildabfrage für den Balken im Hintergrund
                         let zugLower = (t.zug || "").toLowerCase();
                         let noteLower = (t.baustelleNote || "").toLowerCase();
                         let combiText = zugLower + " " + noteLower;
@@ -1097,9 +1133,6 @@
                         if (t.baustelleNote && t.baustelleNote.trim() !== "") {
                             let subBar = document.createElement("div");
                             subBar.className = "baustellen-sub-bar";
-                            subBar.style.left = "0%";
-                            subBar.style.width = "100%";
-                            subBar.style.top = "24px"; 
                             subBar.innerText = t.baustelleNote;
                             subBar.title = "Hinweis: " + t.baustelleNote;
                             subBar.onclick = (e) => openBaustelleModal(t.index, e);
@@ -1132,7 +1165,7 @@
                         tl.appendChild(d);                    });
 
                     let totalHeightLayers = Math.max(layers.length, 1);
-                    tl.style.height = (totalHeightLayers * 38 + 6) + "px";                    
+                    tl.style.height = (totalHeightLayers * 54 + 22) + "px";                    
                     track.appendChild(tl);                    
                     tracksContainer.appendChild(track);
                 });
