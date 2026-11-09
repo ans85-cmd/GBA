@@ -78,7 +78,6 @@
         .header-group.filter {
             border-color: #27314a;
         }
-        /* Neues Informationsfeld Styling */
         .header-group.info-banner {
             background: rgba(27, 35, 54, 0.9);
             border-color: var(--highlight);
@@ -280,6 +279,28 @@
             box-sizing: border-box;
             cursor: pointer;
         }
+        /* Styling für Garnituren-Bilder im Balken */
+        .train-garnitur-bg {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            position: relative;
+        }
+        .train-garnitur-bg::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: inherit;
+            z-index: 1;
+        }
+        .train-garnitur-bg span, .train-garnitur-bg {
+            z-index: 2;
+            position: relative;
+            color: #ffffff !important;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+        }
+
         .highlight { 
             outline: 2px solid var(--highlight); 
             box-shadow: 0 0 8px var(--highlight); 
@@ -516,7 +537,6 @@
                     <input id="farbe" type="color" value="#e2001a" style="width: 36px; padding: 2px; cursor: pointer;">
                     <button onclick="addEntry()">Belegung Speichern</button>
                 </div>
-                <!-- Informationsfeld -->
                 <div class="header-group info-banner">
                     <span>Abstellplanung ab 13.12.2026</span>
                 </div>
@@ -1075,6 +1095,26 @@
                             subBar.style.top = "24px"; 
                             subBar.innerText = t.baustelleNote;
                             subBar.title = "Baustelle: " + t.baustelleNote;
+
+                            // Automatische Bildzuweisung je nach Begriff im Hinweis oder Zugnamen
+                            let noteLower = t.baustelleNote.toLowerCase();
+                            let zugLower = (t.zug || "").toLowerCase();
+                            let combiText = noteLower + " " + zugLower;
+
+                            if (combiText.includes("railjet")) {
+                                subBar.style.backgroundImage = "url('railjet.jpg')";
+                                subBar.classList.add("train-garnitur-bg");
+                            } else if (combiText.includes("kiss")) {
+                                subBar.style.backgroundImage = "url('kiss.jpg')";
+                                subBar.classList.add("train-garnitur-bg");
+                            } else if (combiText.includes("wendezug")) {
+                                subBar.style.backgroundImage = "url('wendezug.jpg')";
+                                subBar.classList.add("train-garnitur-bg");
+                            } else if (combiText.includes("garnitur")) {
+                                subBar.style.backgroundImage = "url('garnitur.jpg')";
+                                subBar.classList.add("train-garnitur-bg");
+                            }
+
                             subBar.onclick = (e) => openBaustelleModal(t.index, e);
                             d.appendChild(subBar);
                         }
