@@ -225,11 +225,11 @@
             align-items: center;
             justify-content: center;
         }
+        
         .train:active { 
             cursor: grabbing; 
         }
-
-        /* Haupt-Beschriftung als Textfeld OBERHALB des Bildes */
+        
         .train-top-bar {
             position: absolute;
             height: 15px;
@@ -253,8 +253,7 @@
             box-sizing: border-box;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
         }
-
-        /* Untere Baustellen-Sub-Bar */
+        
         .baustellen-sub-bar {
             position: absolute;
             height: 14px;
@@ -277,8 +276,7 @@
             box-sizing: border-box;
             cursor: pointer;
         }
-
-        /* Styling wenn ein Garnituren-Bild verwendet wird */
+        
         .train-garnitur-bg {
             background-size: cover !important;
             background-position: center !important;
@@ -572,7 +570,7 @@
                     <input id="search" placeholder="🔎 Zug-Suche..." oninput="render()" style="width: 110px;">
                     <button onclick="exportPDF()" style="background:#166534; font-weight:bold;">🖨 PDF Export</button>
                 </div>
-                <span class="copyright">GBA Version 4.0 (Update 28/10/2026) © Bernhard Kornberger 2026</span>
+                <span class="copyright">GBA Version 5.0 (Update 09/11/2026) © Bernhard Kornberger 2026</span>
             </div>
             <div id="app" class="container"></div>
             <div class="bottom" id="bottomPanel">
@@ -653,10 +651,10 @@
             }
 
             try {                
-                const resp = await fetch('X99.json');                
+                const resp = await fetch('X88.json');                
                 if (resp.ok) data = await resp.json();            
             } catch (e) {                 
-                console.warn("Kein X99.json gefunden.");             
+                console.warn("Kein X88.json gefunden.");             
             }
 
             await loadKnoloData();            
