@@ -1064,16 +1064,16 @@
                         let combiText = zugLower + " " + noteLower;
 
                         if (combiText.includes("railjet")) {
-                            d.style.backgroundImage = "url('railjet.png')";
+                            d.style.backgroundImage = "url('railjet.jpg')";
                             d.classList.add("train-garnitur-bg");
                         } else if (combiText.includes("kiss")) {
-                            d.style.backgroundImage = "url('kiss.png')";
+                            d.style.backgroundImage = "url('kiss.jpg')";
                             d.classList.add("train-garnitur-bg");
                         } else if (combiText.includes("wendezug")) {
-                            d.style.backgroundImage = "url('wendezug.png')";
+                            d.style.backgroundImage = "url('wendezug.jpg')";
                             d.classList.add("train-garnitur-bg");
                         } else if (combiText.includes("garnitur")) {
-                            d.style.backgroundImage = "url('garnitur.png')";
+                            d.style.backgroundImage = "url('garnitur.jpg')";
                             d.classList.add("train-garnitur-bg");
                         }
 
@@ -1101,7 +1101,7 @@
                             subBar.style.width = "100%";
                             subBar.style.top = "24px"; 
                             subBar.innerText = t.baustelleNote;
-                            subBar.title = "Baustelle: " + t.baustelleNote;
+                            subBar.title = "Hinweis: " + t.baustelleNote;
                             subBar.onclick = (e) => openBaustelleModal(t.index, e);
                             d.appendChild(subBar);
                         }
