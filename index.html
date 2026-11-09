@@ -220,7 +220,7 @@
             font-weight: bold; 
             border-radius: 4px; 
             user-select: none; 
-            overflow: visible; 
+            overflow: hidden; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -228,6 +228,24 @@
         }
         .train:active { 
             cursor: grabbing; 
+        }
+        /* Eingebettetes Garnituren-Bild im Balken */
+        .train-img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+        .train span {
+            position: relative;
+            z-index: 3;
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 3px rgba(0,0,0,0.9);
         }
         .warning-dot {
             position: absolute;
@@ -239,6 +257,7 @@
             border-radius: 50%;
             border: 1px solid white;
             box-shadow: 0 0 4px #ff0000;
+            z-index: 5;
         }
         .train-plus-btn {
             position: absolute;
@@ -255,7 +274,7 @@
             border: 1px solid #000;
             cursor: pointer;
             font-weight: bold;
-            z-index: 5;
+            z-index: 6;
             box-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
         .train-plus-btn:hover {
@@ -281,28 +300,6 @@
             cursor: pointer;
             box-shadow: 0 2px 6px rgba(255, 214, 0, 0.3);
         }
-        /* Edler Garnituren-Balken mit Bild im Hintergrund */
-        .train-garnitur-card {
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .train-garnitur-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(90deg, rgba(10,13,20,0.85) 0%, rgba(10,13,20,0.4) 50%, rgba(10,13,20,0.85) 100%);
-            border-radius: inherit;
-            z-index: 1;
-        }
-        .train-garnitur-card * {
-            z-index: 2;
-            position: relative;
-        }
-
         .highlight { 
             outline: 2px solid var(--highlight); 
             box-shadow: 0 0 10px var(--highlight); 
@@ -1046,7 +1043,6 @@
                         let assignedLayer = 0;                                                
                         let isHinweis = t.zug && t.zug.trim().startsWith("W:");                        
                         let zugFarbe = isHinweis ? "#e2001a" : (t.farbe || "#e2001a");                        
-                        d.style.color = "white"; 
 
                         while (true) {
                             layers[assignedLayer] ??= [];
@@ -1060,7 +1056,7 @@
 
                         d.style.left = s1 / 1440 * 100 + "%";                        
                         d.style.width = (e1 - s1) / 1440 * 100 + "%";                        
-                        d.style.top = (assignedLayer * 46) + "px"; // Mehr Abstand für elegantes Layering
+                        d.style.top = (assignedLayer * 46) + "px"; 
 
                         let gefundenerBereich = getBereich(t.gleis);                        
                         let zusatzText = "";
@@ -1070,30 +1066,32 @@
                             zusatzText = ` (${gefundenerBereich.hinweis})`;                        }
 
                         d.style.background = zugFarbe;                        
-                        d.innerText = t.zug;
+
+                        // Automatische Bildzuweisung als echtes Image-Element für perfekte Darstellung
+                        let zugLower = (t.zug || "").toLowerCase();
+                        let noteLower = (t.baustelleNote || "").toLowerCase();
+                        let combiText = zugLower + " " + noteLower;
+                        let imgFile = "";
+
+                        if (combiText.includes("railjet")) imgFile = "railjet.png";
+                        else if (combiText.includes("kiss")) imgFile = "kiss.png";
+                        else if (combiText.includes("wendezug")) imgFile = "wendezug.png";
+                        else if (combiText.includes("garnitur")) imgFile = "garnitur.png";
+
+                        if (imgFile) {
+                            let imgTag = document.createElement("img");
+                            imgTag.src = imgFile;
+                            imgTag.className = "train-img-bg";
+                            d.appendChild(imgTag);
+                        }
+
+                        let textSpan = document.createElement("span");
+                        textSpan.innerText = t.zug;
+                        d.appendChild(textSpan);
 
                         let fullTitleText = `${t.zug}: ${t.von} bis ${t.bis} (${tag}, Gleis ${t.gleis})${zusatzText}`;
                         if (t.baustelleNote) fullTitleText += ` | Baustelle: ${t.baustelleNote}`;
                         d.title = fullTitleText;
-
-                        // Automatische Bildzuweisung direkt als edler Hintergrund im Hauptbalken
-                        let zugLower = (t.zug || "").toLowerCase();
-                        let noteLower = (t.baustelleNote || "").toLowerCase();
-                        let combiText = zugLower + " " + noteLower;
-
-                        if (combiText.includes("railjet")) {
-                            d.style.backgroundImage = "url('railjet.png')";
-                            d.classList.add("train-garnitur-card");
-                        } else if (combiText.includes("kiss")) {
-                            d.style.backgroundImage = "url('kiss.png')";
-                            d.classList.add("train-garnitur-card");
-                        } else if (combiText.includes("wendezug")) {
-                            d.style.backgroundImage = "url('wendezug.png')";
-                            d.classList.add("train-garnitur-card");
-                        } else if (combiText.includes("garnitur")) {
-                            d.style.backgroundImage = "url('garnitur.png')";
-                            d.classList.add("train-garnitur-card");
-                        }
 
                         if (t.wegzeitWarning) {                            
                             let dot = document.createElement("div");                            
@@ -1108,7 +1106,6 @@
                         plusBtn.onclick = (e) => openBaustelleModal(t.index, e);
                         d.appendChild(plusBtn);
 
-                        // Wenn Baustellenhinweis vorhanden, sitzt dieser nun direkt edel darunter
                         if (t.baustelleNote && t.baustelleNote.trim() !== "") {
                             let subBar = document.createElement("div");
                             subBar.className = "baustellen-sub-bar";
