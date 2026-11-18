@@ -1008,7 +1008,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "211",
+    "gleis": "264",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -2401,7 +2401,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -4772,7 +4772,7 @@
   {
     "tag": "Dienstag",
     "gleis": "429",
-    "zug": "LEER",
+    "zug": "NV RESERVE",
     "von": "00:01",
     "bis": "23:59",
     "farbe": "#e2001a",
@@ -4781,7 +4781,7 @@
   {
     "tag": "Mittwoch",
     "gleis": "429",
-    "zug": "LEER",
+    "zug": "NV RESERVE",
     "von": "00:01",
     "bis": "23:59",
     "farbe": "#e2001a",
@@ -5145,5 +5145,140 @@
     "bis": "23:59",
     "farbe": "#e2001a",
     "baustelleNote": "ENT"
+  },
+  {
+    "tag": "Montag",
+    "gleis": "427",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Dienstag",
+    "gleis": "427",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "427",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "427",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "427",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Montag",
+    "gleis": "429",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "429",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "429",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Montag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Dienstag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Samstag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Sonntag",
+    "gleis": "144",
+    "zug": "NV RESERVE",
+    "von": "00:01",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
   }
 ]
