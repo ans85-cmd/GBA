@@ -204,7 +204,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "142",
+    "gleis": "266",
     "zug": "1529/ABST cityjet",
     "von": "21:23",
     "bis": "23:59",
@@ -212,7 +212,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "427",
+    "gleis": "142",
     "zug": "79203/ABST cityjet",
     "von": "08:37",
     "bis": "23:59",
@@ -220,7 +220,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "252",
+    "gleis": "262",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -229,7 +229,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "Fr15317ABST/So1528 wendezug",
     "von": "00:01",
     "bis": "23:59",
@@ -248,7 +248,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "Fr5080/ABST/Mo25701 wendezug",
     "von": "00:01",
     "bis": "23:59",
@@ -258,7 +258,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "432",
+    "gleis": "391",
     "zug": "25783/5089 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -267,7 +267,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "432",
+    "gleis": "391",
     "zug": "25783/5089 talent",
     "von": "00:00",
     "bis": "00:34",
@@ -276,7 +276,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "264",
+    "gleis": "212",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
@@ -285,16 +285,16 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "140",
+    "gleis": "BAHNSTEIG",
     "zug": "1531/5089 cityjet",
     "von": "22:23",
     "bis": "23:59",
     "wegzeitWarning": true,
-    "baustelleNote": "WC"
+    "baustelleNote": "WC-BAHNSTEIG"
   },
   {
     "tag": "Montag",
-    "gleis": "140",
+    "gleis": "BAHNSTEIG",
     "zug": "1531/5089 cityjet",
     "von": "00:00",
     "bis": "00:34",
@@ -319,7 +319,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/3091 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -328,7 +328,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/3091 talent",
     "von": "00:00",
     "bis": "01:34",
@@ -336,7 +336,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -344,7 +344,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -354,7 +354,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -364,7 +364,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "548/741 kiss",
     "von": "12:49",
     "bis": "15:11",
@@ -374,7 +374,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
@@ -384,7 +384,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -422,7 +422,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "264",
+    "gleis": "212",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
@@ -432,7 +432,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "418",
+    "gleis": "427",
     "zug": "1533/5012 cityjet",
     "von": "01:13",
     "bis": "04:02",
@@ -440,7 +440,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "142",
+    "gleis": "266",
     "zug": "ABST/5012 cityjet",
     "von": "00:01",
     "bis": "04:02",
@@ -449,8 +449,8 @@
     "baustelleNote": ""
   },
   {
-    "tag": "Freitag",
-    "gleis": "418",
+    "tag": "Sonntag",
+    "gleis": "427",
     "zug": "1533/5012 cityjet",
     "von": "01:13",
     "bis": "04:02",
@@ -458,7 +458,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "17:49",
     "bis": "23:59",
@@ -466,7 +466,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "00:00",
     "bis": "04:02",
@@ -474,7 +474,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "17:49",
     "bis": "23:59",
@@ -482,7 +482,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "00:00",
     "bis": "04:02",
@@ -490,7 +490,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "17:49",
     "bis": "23:59",
@@ -498,7 +498,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "00:00",
     "bis": "04:02",
@@ -506,7 +506,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "252",
+    "gleis": "430",
     "zug": "3092/25701 talent",
     "von": "02:38",
     "bis": "04:44",
@@ -514,7 +514,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "144",
+    "gleis": "391",
     "zug": "3092/25701 talent",
     "von": "02:38",
     "bis": "04:44",
@@ -524,7 +524,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "762/1290 railjet",
     "von": "00:01",
     "bis": "05:43",
@@ -534,7 +534,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "250",
+    "gleis": "252",
     "zug": "1526 wendezug",
     "von": "00:01",
     "bis": "18:37",
@@ -544,7 +544,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "00:00",
     "bis": "04:44",
@@ -552,7 +552,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "22:23",
     "bis": "23:59",
@@ -561,7 +561,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "00:00",
     "bis": "04:44",
@@ -569,7 +569,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "22:23",
     "bis": "23:59",
@@ -578,7 +578,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "00:00",
     "bis": "04:44",
@@ -586,7 +586,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -596,7 +596,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "00:01",
     "bis": "04:54",
@@ -605,7 +605,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -615,7 +615,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "00:01",
     "bis": "04:54",
@@ -698,7 +698,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "264",
+    "gleis": "262",
     "zug": "896/897 garnitur",
     "von": "22:53",
     "bis": "23:59",
@@ -707,7 +707,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "264",
+    "gleis": "262",
     "zug": "896/897 garnitur",
     "von": "00:00",
     "bis": "05:00",
@@ -752,7 +752,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -761,7 +761,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -770,7 +770,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -779,7 +779,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -788,7 +788,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -797,7 +797,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -806,7 +806,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "391",
+    "gleis": "140",
     "zug": "25745/25786 talent",
     "von": "21:48",
     "bis": "23:59",
@@ -815,7 +815,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "391",
+    "gleis": "138",
     "zug": "25745/ABST talent",
     "von": "21:48",
     "bis": "23:59",
@@ -845,7 +845,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -854,7 +854,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -863,7 +863,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -872,7 +872,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -881,7 +881,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -890,7 +890,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -899,7 +899,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/25786 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -908,7 +908,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -917,7 +917,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "140",
+    "gleis": "430",
     "zug": "25735/25786 talent",
     "von": "22:18",
     "bis": "23:59",
@@ -927,7 +927,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "140",
+    "gleis": "430",
     "zug": "25735/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -937,7 +937,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/25786 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -945,7 +945,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "144",
+    "gleis": "140",
     "zug": "25747/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -974,7 +974,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "209",
+    "gleis": "264",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -992,7 +992,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "209",
+    "gleis": "264",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -1008,7 +1008,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "209",
+    "gleis": "211",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -1018,7 +1018,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "429",
+    "gleis": "417",
     "zug": "664/769 railjet",
     "von": "22:59",
     "bis": "23:59",
@@ -1028,7 +1028,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "429",
+    "gleis": "417",
     "zug": "664/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -1038,7 +1038,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "211",
+    "gleis": "212",
     "zug": "658/769 railjet",
     "von": "21:53",
     "bis": "23:59",
@@ -1046,7 +1046,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "211",
+    "gleis": "212",
     "zug": "658/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -1054,7 +1054,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "00:01",
     "bis": "07:16",
@@ -1064,7 +1064,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "429",
+    "gleis": "264",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -1074,7 +1074,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -1083,7 +1083,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1092,7 +1092,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -1101,7 +1101,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1110,7 +1110,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -1119,7 +1119,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1128,7 +1128,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "392",
+    "gleis": "138",
     "zug": "3078/25788 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -1137,7 +1137,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "392",
+    "gleis": "138",
     "zug": "3078/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1146,7 +1146,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -1156,7 +1156,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -1166,7 +1166,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -1176,7 +1176,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "00:01",
     "bis": "05:30",
@@ -1185,7 +1185,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "418",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -1194,7 +1194,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "418",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1203,7 +1203,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "430",
+    "gleis": "138",
     "zug": "3080/25788 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -1212,7 +1212,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "430",
+    "gleis": "138",
     "zug": "3080/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -1220,18 +1220,8 @@
     "baustelleNote": "1B"
   },
   {
-    "tag": "Montag",
-    "gleis": "209",
-    "zug": "768/668 railjet",
-    "von": "00:59",
-    "bis": "05:30",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
-  },
-  {
     "tag": "Samstag",
-    "gleis": "427",
+    "gleis": "418",
     "zug": "1525/1500 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -1239,7 +1229,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "427",
+    "gleis": "418",
     "zug": "1525/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1247,7 +1237,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "266",
+    "gleis": "418",
     "zug": "1523/1500 cityjet",
     "von": "18:23",
     "bis": "23:59",
@@ -1255,7 +1245,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "266",
+    "gleis": "418",
     "zug": "1523/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1263,7 +1253,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "07:22",
     "bis": "23:59",
@@ -1271,7 +1261,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1279,21 +1269,23 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "07:22",
-    "bis": "23:59"
+    "bis": "23:59",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "00:00",
-    "bis": "05:34"
+    "bis": "05:34",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "07:22",
     "bis": "23:59",
@@ -1301,7 +1293,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1309,7 +1301,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "07:22",
     "bis": "23:59",
@@ -1317,7 +1309,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1325,7 +1317,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "418",
+    "gleis": "393",
     "zug": "5800/85708 5022",
     "von": "05:35",
     "bis": "18:44",
@@ -1335,7 +1327,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "20:26",
     "bis": "23:59",
@@ -1344,7 +1336,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "00:00",
     "bis": "05:37",
@@ -1353,7 +1345,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "20:26",
     "bis": "23:59",
@@ -1362,7 +1354,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "00:00",
     "bis": "05:37",
@@ -1371,7 +1363,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "20:26",
     "bis": "23:59",
@@ -1380,7 +1372,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "00:00",
     "bis": "05:37",
@@ -1389,7 +1381,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "768/1290 railjet",
     "von": "00:59",
     "bis": "05:43",
@@ -1399,7 +1391,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "768/1290 railjet",
     "von": "00:01",
     "bis": "05:43",
@@ -1407,7 +1399,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "768/1290 railjet",
     "von": "00:01",
     "bis": "05:43",
@@ -1475,7 +1467,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "264",
+    "gleis": "212",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
@@ -1485,26 +1477,16 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "264",
+    "gleis": "212",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
     "wegzeitWarning": true,
     "baustelleNote": "369 BB-T"
-  },
-  {
-    "tag": "Freitag",
-    "gleis": "266",
-    "zug": "LEER",
-    "von": "00:01",
-    "bis": "23:59",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
   },
   {
     "tag": "Sonntag",
-    "gleis": "212",
+    "gleis": "136",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
@@ -1523,7 +1505,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -1532,7 +1514,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "00:00",
     "bis": "05:57",
@@ -1541,7 +1523,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -1550,7 +1532,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "00:00",
     "bis": "05:57",
@@ -1559,7 +1541,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -1568,7 +1550,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "00:00",
     "bis": "05:57",
@@ -1656,7 +1638,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "250",
+    "gleis": "262",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -1664,7 +1646,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "250",
+    "gleis": "262",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -1682,7 +1664,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "250",
+    "gleis": "262",
     "zug": "656/659 railjet",
     "von": "00:00",
     "bis": "06:07",
@@ -1702,7 +1684,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "250",
+    "gleis": "211",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -1710,7 +1692,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "417",
+    "gleis": "211",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -1720,182 +1702,182 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "21:23",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Samstag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Dienstag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "21:23",
-    "bis": "23:59",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Mittwoch",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "00:00",
-    "bis": "06:11",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Mittwoch",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "21:23",
-    "bis": "23:59",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "00:00",
-    "bis": "06:11",
-    "farbe": "#e2001a",
-    "wegzeitWarning": true,
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "21:23",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Freitag",
-    "gleis": "140",
-    "zug": "1529/1544 cityjet",
-    "von": "00:00",
-    "bis": "06:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Dienstag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Mittwoch",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Mittwoch",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Freitag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Freitag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Samstag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Samstag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Sonntag",
-    "gleis": "136",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Sonntag",
-    "gleis": "262",
-    "zug": "748/543 kiss",
-    "von": "22:49",
-    "bis": "23:59",
-    "wegzeitWarning": true
-  },
-  {
-    "tag": "Montag",
-    "gleis": "262",
-    "zug": "748/543 kiss",
-    "von": "00:00",
-    "bis": "06:11",
-    "wegzeitWarning": true,
-    "baustelleNote": "543 1A-CHECK"
-  },
-  {
-    "tag": "Montag",
     "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "21:23",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Samstag",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Dienstag",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "21:23",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "00:00",
+    "bis": "06:11",
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "21:23",
+    "bis": "23:59",
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "00:00",
+    "bis": "06:11",
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "21:23",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "142",
+    "zug": "1529/1544 cityjet",
+    "von": "00:00",
+    "bis": "06:11",
+    "farbe": "#e2001a",
+    "baustelleNote": ""
+  },
+  {
+    "tag": "Dienstag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Samstag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Samstag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Sonntag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Sonntag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "22:49",
+    "bis": "23:59",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Montag",
+    "gleis": "260",
+    "zug": "748/543 kiss",
+    "von": "00:00",
+    "bis": "06:11",
+    "wegzeitWarning": true,
+    "baustelleNote": "543 1A-CHECK"
+  },
+  {
+    "tag": "Montag",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "07:22",
     "bis": "23:59",
@@ -1903,7 +1885,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "142",
+    "gleis": "418",
     "zug": "25795/1500 cityjet",
     "von": "00:00",
     "bis": "05:34",
@@ -1911,7 +1893,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "1557/1550 cityjet",
     "von": "07:28",
     "bis": "16:31",
@@ -1920,7 +1902,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/1502 cityjet",
     "von": "17:49",
     "bis": "23:59",
@@ -1928,7 +1910,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/1502 cityjet",
     "von": "00:00",
     "bis": "06:37",
@@ -1936,7 +1918,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "85707/5860 5022",
     "von": "07:34",
     "bis": "09:51",
@@ -1964,7 +1946,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "768/1290 railjet",
     "von": "00:59",
     "bis": "05:51",
@@ -1983,7 +1965,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "140",
+    "gleis": "391",
     "zug": "1686/1508 cityjet",
     "von": "07:41",
     "bis": "09:37",
@@ -1992,7 +1974,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -2002,7 +1984,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2010,7 +1992,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2018,7 +2000,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2026,7 +2008,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2034,7 +2016,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2042,7 +2024,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2050,7 +2032,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2058,7 +2040,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2066,7 +2048,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "262",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2074,7 +2056,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "262",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2082,7 +2064,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "427",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -2090,7 +2072,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "427",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -2107,7 +2089,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2115,7 +2097,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2125,7 +2107,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2133,7 +2115,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2142,7 +2124,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2150,7 +2132,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2159,7 +2141,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2167,7 +2149,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2176,7 +2158,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2184,7 +2166,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2193,7 +2175,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2201,7 +2183,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2210,7 +2192,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2218,7 +2200,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2227,7 +2209,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2235,7 +2217,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2244,7 +2226,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2252,7 +2234,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2261,7 +2243,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2269,7 +2251,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2278,7 +2260,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "250",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -2286,7 +2268,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "250",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2296,7 +2278,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -2304,7 +2286,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -2313,7 +2295,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "417",
+    "gleis": "212",
     "zug": "369/1298 railjet",
     "von": "00:03",
     "bis": "07:16",
@@ -2322,7 +2304,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "210",
+    "gleis": "142",
     "zug": "79203/1546 cityjet",
     "von": "08:37",
     "bis": "14:11",
@@ -2330,7 +2312,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "21:53",
     "bis": "23:59",
@@ -2338,7 +2320,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -2346,7 +2328,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "21:53",
     "bis": "23:59",
@@ -2354,7 +2336,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -2362,7 +2344,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "429",
+    "gleis": "136",
     "zug": "664/551 railjet",
     "von": "22:59",
     "bis": "23:59",
@@ -2372,7 +2354,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "429",
+    "gleis": "136",
     "zug": "664/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -2382,7 +2364,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "21:53",
     "bis": "23:59",
@@ -2391,7 +2373,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -2429,7 +2411,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
@@ -2439,7 +2421,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2449,7 +2431,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2459,7 +2441,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
@@ -2469,7 +2451,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2479,7 +2461,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
@@ -2489,7 +2471,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2499,7 +2481,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
@@ -2509,7 +2491,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2519,7 +2501,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "142",
+    "gleis": "266",
     "zug": "Sa1529/Abstellung/5012Mo cityjet",
     "von": "00:01",
     "bis": "23:59",
@@ -2529,7 +2511,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "00:00",
     "bis": "08:11",
@@ -2547,7 +2529,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "392",
+    "gleis": "311",
     "zug": "3078/3055 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -2557,7 +2539,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "22:05",
     "bis": "23:59",
@@ -2567,7 +2549,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "1505/1528 wendezug",
     "von": "09:23",
     "bis": "19:37",
@@ -2576,7 +2558,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "19:10",
     "bis": "23:59",
@@ -2586,7 +2568,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2595,7 +2577,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "19:10",
     "bis": "23:59",
@@ -2605,7 +2587,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2614,7 +2596,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "19:10",
     "bis": "23:59",
@@ -2624,7 +2606,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2633,7 +2615,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "18:53",
     "bis": "23:59",
@@ -2642,7 +2624,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2651,7 +2633,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "256",
+    "gleis": "262",
     "zug": "790/791 garnitur",
     "von": "18:53",
     "bis": "23:59",
@@ -2660,7 +2642,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "256",
+    "gleis": "262",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2669,7 +2651,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "256",
+    "gleis": "262",
     "zug": "790/791 garnitur",
     "von": "18:53",
     "bis": "23:59",
@@ -2678,7 +2660,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -2687,7 +2669,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "391",
+    "gleis": "393",
     "zug": "1561/3069 talent",
     "von": "09:49",
     "bis": "15:55",
@@ -2696,7 +2678,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2706,7 +2688,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2716,7 +2698,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2726,7 +2708,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2736,7 +2718,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2746,7 +2728,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2756,7 +2738,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2766,7 +2748,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2776,7 +2758,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2786,7 +2768,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2796,7 +2778,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "19:49",
     "bis": "23:59",
@@ -2806,7 +2788,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -2816,7 +2798,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "140",
+    "gleis": "391",
     "zug": "1686/1508 cityjet",
     "von": "07:41",
     "bis": "09:37",
@@ -2825,7 +2807,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "140",
+    "gleis": "391",
     "zug": "1686/1508 cityjet",
     "von": "07:41",
     "bis": "09:37",
@@ -2834,7 +2816,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "140",
+    "gleis": "391",
     "zug": "1686/1508 cityjet",
     "von": "07:41",
     "bis": "09:37",
@@ -2843,7 +2825,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "140",
+    "gleis": "391",
     "zug": "1686/1508 cityjet",
     "von": "07:41",
     "bis": "09:37",
@@ -2852,7 +2834,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
@@ -2862,7 +2844,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "85707/5860 5022",
     "von": "07:34",
     "bis": "09:51",
@@ -2871,7 +2853,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "85707/5860 5022",
     "von": "07:34",
     "bis": "09:51",
@@ -2880,7 +2862,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "85707/5860 5022",
     "von": "07:34",
     "bis": "09:51",
@@ -2889,7 +2871,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "85707/5860 5022",
     "von": "07:34",
     "bis": "09:51",
@@ -2908,7 +2890,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2916,7 +2898,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2924,7 +2906,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2932,7 +2914,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2940,7 +2922,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2948,7 +2930,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2956,7 +2938,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2964,7 +2946,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2972,7 +2954,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2980,7 +2962,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2988,7 +2970,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -2996,7 +2978,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "210",
     "zug": "540/641 kiss",
     "von": "08:49",
     "bis": "10:11",
@@ -3036,7 +3018,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "250",
+    "gleis": "252",
     "zug": "890/793 garnitur",
     "von": "08:53",
     "bis": "11:07",
@@ -3052,7 +3034,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3060,7 +3042,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3068,7 +3050,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3076,7 +3058,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3084,7 +3066,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3092,7 +3074,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "542/643 kiss",
     "von": "09:49",
     "bis": "11:11",
@@ -3100,7 +3082,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -3149,7 +3131,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "262",
     "zug": "798/795 garnitur",
     "von": "10:53",
     "bis": "13:07",
@@ -3157,7 +3139,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3183,7 +3165,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "210",
+    "gleis": "142",
     "zug": "79203/1546 cityjet",
     "von": "08:37",
     "bis": "14:11",
@@ -3191,7 +3173,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "210",
+    "gleis": "142",
     "zug": "79203/1546 cityjet",
     "von": "08:37",
     "bis": "14:11",
@@ -3199,7 +3181,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "210",
+    "gleis": "142",
     "zug": "79203/1546 cityjet",
     "von": "08:37",
     "bis": "14:11",
@@ -3207,7 +3189,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "210",
+    "gleis": "142",
     "zug": "79203/1546 cityjet",
     "von": "08:37",
     "bis": "14:11",
@@ -3215,7 +3197,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3225,7 +3207,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3234,7 +3216,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "136",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3243,7 +3225,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3252,7 +3234,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3261,7 +3243,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "848/797 kiss",
     "von": "07:49",
     "bis": "15:07",
@@ -3270,7 +3252,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "138",
+    "gleis": "136",
     "zug": "646/545 kiss",
     "von": "16:49",
     "bis": "23:59",
@@ -3278,7 +3260,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "138",
+    "gleis": "134",
     "zug": "646/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -3287,7 +3269,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -3307,7 +3289,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "432",
+    "gleis": "393",
     "zug": "1561/3069 talent",
     "von": "09:49",
     "bis": "15:55",
@@ -3316,7 +3298,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "432",
+    "gleis": "393",
     "zug": "1561/3069 talent",
     "von": "09:49",
     "bis": "15:55",
@@ -3325,7 +3307,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "432",
+    "gleis": "393",
     "zug": "1561/3069 talent",
     "von": "09:49",
     "bis": "15:55",
@@ -3334,7 +3316,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "17:49",
     "bis": "23:59",
@@ -3342,7 +3324,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "427",
+    "gleis": "266",
     "zug": "1549/5012 cityjet",
     "von": "00:00",
     "bis": "04:02",
@@ -3350,7 +3332,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "21:48",
     "bis": "23:59",
@@ -3359,7 +3341,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "00:00",
     "bis": "16:31",
@@ -3368,7 +3350,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "1557/1550 talent",
     "von": "07:28",
     "bis": "16:31",
@@ -3377,7 +3359,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "1557/1550 talent",
     "von": "07:28",
     "bis": "16:31",
@@ -3386,7 +3368,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "21:48",
     "bis": "23:59",
@@ -3395,7 +3377,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "00:00",
     "bis": "16:31",
@@ -3404,7 +3386,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "1557/1550 talent",
     "von": "07:28",
     "bis": "16:31",
@@ -3413,7 +3395,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "432",
+    "gleis": "393",
     "zug": "1561/1550 talent",
     "von": "09:49",
     "bis": "16:31",
@@ -3422,7 +3404,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "1557/1550 talent",
     "von": "07:28",
     "bis": "16:31",
@@ -3431,7 +3413,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "432",
+    "gleis": "311",
     "zug": "3074/1550 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -3439,16 +3421,17 @@
   },
   {
     "tag": "Montag",
-    "gleis": "432",
+    "gleis": "311",
     "zug": "3074/1550 talent",
-    "von": "00:00",
+    "von": "00:01",
     "bis": "16:31",
-    "baustelleNote": "1A",
-    "wegzeitWarning": true
+    "farbe": "#e2001a",
+    "wegzeitWarning": true,
+    "baustelleNote": "1A"
   },
   {
     "tag": "Montag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "1523/1695 cityjet",
     "von": "18:23",
     "bis": "21:07",
@@ -3456,7 +3439,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "19:10",
     "bis": "23:59",
@@ -3466,7 +3449,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "256",
+    "gleis": "252",
     "zug": "790/791 garnitur",
     "von": "00:00",
     "bis": "09:07",
@@ -3515,7 +3498,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "262",
     "zug": "794/799 garnitur",
     "von": "14:53",
     "bis": "17:07",
@@ -3541,7 +3524,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3549,7 +3532,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3557,7 +3540,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3565,7 +3548,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3573,7 +3556,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3581,7 +3564,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "258",
+    "gleis": "136",
     "zug": "642/745 kiss",
     "von": "14:49",
     "bis": "17:11",
@@ -3625,7 +3608,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -3635,7 +3618,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "00:00",
     "bis": "04:54",
@@ -3663,7 +3646,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -3671,7 +3654,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -3679,7 +3662,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -3715,7 +3698,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "250",
+    "gleis": "252",
     "zug": "1531/1526 wendezug",
     "von": "22:23",
     "bis": "23:59",
@@ -3724,7 +3707,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "22:23",
     "bis": "23:59",
@@ -3734,7 +3717,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "418",
+    "gleis": "393",
     "zug": "5800/85708 5022",
     "von": "05:35",
     "bis": "18:44",
@@ -3743,7 +3726,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "418",
+    "gleis": "393",
     "zug": "5800/85708 5022",
     "von": "05:35",
     "bis": "18:44",
@@ -3752,7 +3735,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "418",
+    "gleis": "393",
     "zug": "5800/85708 5022",
     "von": "05:35",
     "bis": "18:44",
@@ -3761,7 +3744,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "418",
+    "gleis": "393",
     "zug": "5800/85708 5022",
     "von": "05:35",
     "bis": "18:44",
@@ -3770,7 +3753,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "392",
+    "gleis": "430",
     "zug": "3048/3075 talent",
     "von": "07:37",
     "bis": "18:55",
@@ -3779,7 +3762,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "20:26",
     "bis": "23:59",
@@ -3788,7 +3771,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/5093 wendezug",
     "von": "00:00",
     "bis": "05:37",
@@ -3833,7 +3816,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "20:49",
     "bis": "23:59",
@@ -3841,7 +3824,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "432",
     "zug": "811/810 cityjet",
     "von": "00:00",
     "bis": "07:11",
@@ -3887,7 +3870,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "250",
+    "gleis": "252",
     "zug": "792/891 garnitur",
     "von": "16:53",
     "bis": "19:07",
@@ -3895,7 +3878,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "252",
+    "gleis": "262",
     "zug": "792/891 garnitur",
     "von": "16:53",
     "bis": "19:07",
@@ -3903,7 +3886,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "20:53",
     "bis": "23:59",
@@ -3911,7 +3894,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "898/545 kiss",
     "von": "00:00",
     "bis": "07:11",
@@ -3920,7 +3903,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "142",
+    "gleis": "432",
     "zug": "3070/1528 cityjet",
     "von": "18:05",
     "bis": "19:37",
@@ -3929,7 +3912,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "1505/1528 wendezug",
     "von": "09:23",
     "bis": "19:37",
@@ -3938,7 +3921,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "1505/1528 wendezug",
     "von": "09:23",
     "bis": "19:37",
@@ -3947,7 +3930,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "1505/1528 wendezug",
     "von": "09:23",
     "bis": "19:37",
@@ -3956,7 +3939,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "1505/1528 wendezug",
     "von": "09:23",
     "bis": "19:37",
@@ -3965,7 +3948,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "427",
+    "gleis": "142",
     "zug": "79203/1544 cityjet",
     "von": "00:01",
     "bis": "06:11",
@@ -3975,7 +3958,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "21:30",
     "bis": "23:59",
@@ -3985,7 +3968,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "25783/25788 talent",
     "von": "00:00",
     "bis": "05:30",
@@ -3994,7 +3977,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4003,7 +3986,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4012,7 +3995,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4021,7 +4004,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4030,7 +4013,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4039,7 +4022,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "140",
+    "gleis": "260",
     "zug": "796/841 kiss",
     "von": "12:53",
     "bis": "20:11",
@@ -4048,7 +4031,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "21:48",
     "bis": "23:59",
@@ -4058,7 +4041,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1550 talent",
     "von": "00:00",
     "bis": "16:31",
@@ -4067,7 +4050,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "21:53",
     "bis": "23:59",
@@ -4076,7 +4059,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "211",
+    "gleis": "136",
     "zug": "658/551 railjet",
     "von": "00:00",
     "bis": "08:07",
@@ -4086,7 +4069,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1695 talent",
     "von": "21:48",
     "bis": "23:59",
@@ -4095,25 +4078,27 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "391",
+    "gleis": "146",
     "zug": "25745/1695 talent",
     "von": "00:00",
-    "bis": "21:07",
+    "bis": "21:00",
+    "farbe": "#e2001a",
     "wegzeitWarning": true,
     "baustelleNote": "1B"
   },
   {
     "tag": "Montag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "22:05",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "WC"
+    "baustelleNote": "WC",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -4122,7 +4107,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "427",
+    "gleis": "210",
     "zug": "1525/1695 cityjet",
     "von": "19:23",
     "bis": "21:07",
@@ -4130,7 +4115,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "1523/1695 cityjet",
     "von": "18:23",
     "bis": "21:07",
@@ -4138,7 +4123,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "1523/1695 cityjet",
     "von": "18:23",
     "bis": "21:07",
@@ -4146,7 +4131,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "252",
+    "gleis": "134",
     "zug": "1523/1695 cityjet",
     "von": "18:23",
     "bis": "21:07",
@@ -4154,7 +4139,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "25701 wendezug",
     "von": "00:01",
     "bis": "04:44",
@@ -4164,7 +4149,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "00:00",
     "bis": "04:44",
@@ -4174,7 +4159,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "22:48",
     "bis": "23:59",
@@ -4184,7 +4169,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "144",
+    "gleis": "393",
     "zug": "25747/25790 talent",
     "von": "00:00",
     "bis": "05:57",
@@ -4194,7 +4179,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -4204,7 +4189,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "136",
+    "gleis": "260",
     "zug": "748/543 kiss",
     "von": "22:49",
     "bis": "23:59",
@@ -4214,7 +4199,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "136",
+    "gleis": "260",
     "zug": "748/543 kiss",
     "von": "00:00",
     "bis": "06:11",
@@ -4241,7 +4226,7 @@
   },
   {
     "tag": "Montag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -4251,7 +4236,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "430",
+    "gleis": "140",
     "zug": "3080/25786 talent",
     "von": "00:00",
     "bis": "05:00",
@@ -4260,7 +4245,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -4268,7 +4253,7 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -4276,7 +4261,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -4284,7 +4269,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -4292,7 +4277,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "136",
+    "gleis": "210",
     "zug": "760/845 railjet",
     "von": "19:53",
     "bis": "22:11",
@@ -4300,7 +4285,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "430",
+    "gleis": "427",
     "zug": "3080/5085 talent",
     "von": "23:08",
     "bis": "23:59",
@@ -4309,7 +4294,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "430",
+    "gleis": "427",
     "zug": "3080/5085 talent",
     "von": "00:00",
     "bis": "22:34",
@@ -4328,7 +4313,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "209",
+    "gleis": "264",
     "zug": "764/769 railjet",
     "von": "00:00",
     "bis": "05:01",
@@ -4392,39 +4377,43 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "5080/ABST wendezug",
     "von": "20:26",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "WU"
+    "baustelleNote": "WU",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
-    "gleis": "260",
+    "gleis": "258",
     "zug": "Fr5080/ABST/Mo25701 wendezug",
     "von": "00:01",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/25701 wendezug",
     "von": "22:23",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "WU"
+    "baustelleNote": "WU",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "ABST/1528 wendezug",
     "von": "00:01",
     "bis": "19:37",
     "farbe": "#e2001a",
-    "baustelleNote": "AU"
+    "baustelleNote": "AU",
+    "wegzeitWarning": true
   },
   {
     "tag": "Montag",
@@ -4437,12 +4426,13 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "262",
+    "gleis": "250",
     "zug": "1531/ABST wendezug",
     "von": "22:23",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "WU"
+    "baustelleNote": "WU",
+    "wegzeitWarning": true
   },
   {
     "tag": "Samstag",
@@ -4464,52 +4454,57 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "392",
+    "gleis": "311",
     "zug": "3078/3055 talent",
     "von": "00:01",
     "bis": "08:55",
     "farbe": "#e2001a",
-    "baustelleNote": "1B"
+    "baustelleNote": "1B",
+    "wegzeitWarning": true
   },
   {
     "tag": "Montag",
-    "gleis": "392",
+    "gleis": "140",
     "zug": "3078/25786 talent",
     "von": "00:01",
     "bis": "05:00",
     "farbe": "#e2001a",
-    "baustelleNote": "1A"
+    "baustelleNote": "1A",
+    "wegzeitWarning": true
   },
   {
     "tag": "Samstag",
-    "gleis": "391",
+    "gleis": "140",
     "zug": "25745/25786 talent",
     "von": "00:01",
     "bis": "05:00",
     "farbe": "#e2001a",
-    "baustelleNote": "1A"
+    "baustelleNote": "1A",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
-    "gleis": "391",
+    "gleis": "138",
     "zug": "25745/ABST/25788 talent",
     "von": "00:01",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Montag",
-    "gleis": "391",
+    "gleis": "138",
     "zug": "25788 talent",
     "von": "00:01",
     "bis": "05:30",
     "farbe": "#e2001a",
-    "baustelleNote": "1B"
+    "baustelleNote": "1B",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "00:01",
     "bis": "05:30",
@@ -4519,7 +4514,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "146",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "00:01",
     "bis": "05:30",
@@ -4529,7 +4524,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "20:05",
     "bis": "23:59",
@@ -4539,16 +4534,17 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "432",
+    "gleis": "138",
     "zug": "3074/25788 talent",
     "von": "00:01",
     "bis": "05:30",
     "farbe": "#e2001a",
-    "baustelleNote": "1A"
+    "baustelleNote": "1A",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -4557,7 +4553,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "00:01",
     "bis": "04:54",
@@ -4566,7 +4562,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "00:01",
     "bis": "04:54",
@@ -4575,7 +4571,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "393",
+    "gleis": "391",
     "zug": "1525/1687 cityjet",
     "von": "19:23",
     "bis": "23:59",
@@ -4584,12 +4580,13 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
@@ -4755,7 +4752,7 @@
   },
   {
     "tag": "Donnerstag",
-    "gleis": "250",
+    "gleis": "262",
     "zug": "656/659 railjet",
     "von": "00:06",
     "bis": "06:07",
@@ -4764,7 +4761,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "427",
+    "gleis": "142",
     "zug": "Sa79203/ABST/Mo1544 cityjet",
     "von": "00:01",
     "bis": "23:59",
@@ -4792,12 +4789,13 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "210",
+    "gleis": "209",
     "zug": "762/1290 railjet",
     "von": "21:53",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
@@ -4806,11 +4804,12 @@
     "von": "00:59",
     "bis": "06:56",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Montag",
-    "gleis": "140",
+    "gleis": "142",
     "zug": "1529/1544 cityjet",
     "von": "21:23",
     "bis": "23:59",
@@ -4819,7 +4818,7 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "140",
+    "gleis": "142",
     "zug": "1529/1544 cityjet",
     "von": "00:00",
     "bis": "06:11",
@@ -4828,16 +4827,17 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "264",
+    "gleis": "212",
     "zug": "369/366 railjet",
     "von": "00:03",
     "bis": "05:56",
     "farbe": "#e2001a",
-    "baustelleNote": "369 BB-T"
+    "baustelleNote": "369 BB-T",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
-    "gleis": "258",
+    "gleis": "256",
     "zug": "742/549 kiss",
     "von": "00:00",
     "bis": "09:11",
@@ -4846,93 +4846,103 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "00:01",
     "bis": "07:16",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "00:01",
     "bis": "07:16",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Donnerstag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "00:01",
     "bis": "07:16",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Freitag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "00:01",
     "bis": "07:16",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Montag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "20:52",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "20:52",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "20:52",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Donnerstag",
-    "gleis": "212",
+    "gleis": "211",
     "zug": "1299/1298 railjet",
     "von": "20:52",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Freitag",
-    "gleis": "212",
+    "gleis": "264",
     "zug": "1299/366 railjet",
     "von": "20:52",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Samstag",
-    "gleis": "212",
+    "gleis": "264",
     "zug": "1299/366 railjet",
     "von": "00:01",
     "bis": "05:56",
     "farbe": "#e2001a",
-    "baustelleNote": "ENTSORGEN"
+    "baustelleNote": "ENTSORGEN",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
@@ -4945,124 +4955,136 @@
   },
   {
     "tag": "Dienstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Donnerstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Freitag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Samstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Sonntag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "544/647 kiss",
     "von": "10:49",
     "bis": "13:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Dienstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "548/741 kiss",
     "von": "12:49",
     "bis": "15:11",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
     "tag": "Mittwoch",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "548/741 kiss",
     "von": "12:49",
     "bis": "15:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Donnerstag",
+    "gleis": "136",
+    "zug": "548/741 kiss",
+    "von": "12:49",
+    "bis": "15:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Freitag",
+    "gleis": "136",
+    "zug": "548/741 kiss",
+    "von": "12:49",
+    "bis": "15:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Samstag",
+    "gleis": "136",
+    "zug": "548/741 kiss",
+    "von": "12:49",
+    "bis": "15:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Sonntag",
+    "gleis": "136",
+    "zug": "548/741 kiss",
+    "von": "12:49",
+    "bis": "15:11",
+    "farbe": "#e2001a",
+    "baustelleNote": "",
+    "wegzeitWarning": true
+  },
+  {
+    "tag": "Mittwoch",
+    "gleis": "136",
+    "zug": "646/816 kiss",
+    "von": "16:49",
+    "bis": "21:11",
     "farbe": "#e2001a",
     "baustelleNote": ""
   },
   {
     "tag": "Donnerstag",
-    "gleis": "134",
-    "zug": "548/741 kiss",
-    "von": "12:49",
-    "bis": "15:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Freitag",
-    "gleis": "134",
-    "zug": "548/741 kiss",
-    "von": "12:49",
-    "bis": "15:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Samstag",
-    "gleis": "134",
-    "zug": "548/741 kiss",
-    "von": "12:49",
-    "bis": "15:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Sonntag",
-    "gleis": "134",
-    "zug": "548/741 kiss",
-    "von": "12:49",
-    "bis": "15:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Mittwoch",
-    "gleis": "134",
-    "zug": "646/816 kiss",
-    "von": "16:49",
-    "bis": "21:11",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -5071,7 +5093,7 @@
   },
   {
     "tag": "Freitag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -5080,7 +5102,7 @@
   },
   {
     "tag": "Samstag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -5089,7 +5111,7 @@
   },
   {
     "tag": "Sonntag",
-    "gleis": "134",
+    "gleis": "136",
     "zug": "646/816 kiss",
     "von": "16:49",
     "bis": "21:11",
@@ -5098,47 +5120,30 @@
   },
   {
     "tag": "Mittwoch",
-    "gleis": "134",
+    "gleis": "256",
     "zug": "746/547 kiss",
     "von": "21:49",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "",
+    "wegzeitWarning": true
   },
   {
-    "tag": "Dienstag",
-    "gleis": "266",
-    "zug": "LEER",
-    "von": "00:01",
+    "tag": "Montag",
+    "gleis": "256",
+    "zug": "742/549 kiss",
+    "von": "19:49",
     "bis": "23:59",
     "farbe": "#e2001a",
     "baustelleNote": ""
   },
   {
-    "tag": "Mittwoch",
-    "gleis": "266",
-    "zug": "LEER",
-    "von": "00:01",
+    "tag": "Sonntag",
+    "gleis": "391",
+    "zug": "25783/5085 talent",
+    "von": "21:30",
     "bis": "23:59",
     "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Donnerstag",
-    "gleis": "266",
-    "zug": "LEER",
-    "von": "00:01",
-    "bis": "23:59",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
-  },
-  {
-    "tag": "Samstag",
-    "gleis": "266",
-    "zug": "LEER",
-    "von": "00:01",
-    "bis": "23:59",
-    "farbe": "#e2001a",
-    "baustelleNote": ""
+    "baustelleNote": "ENT"
   }
 ]
